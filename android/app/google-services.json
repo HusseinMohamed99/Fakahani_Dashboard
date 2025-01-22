@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "993626480061",
+    "project_id": "fakahani-73130",
+    "storage_bucket": "fakahani-73130.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993626480061:android:a73e2f88dc6701ee0d06d4",
+        "android_client_info": {
+          "package_name": "com.Dev.fakahani"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993626480061-4d77v771203tutcjldrb4vbmvjk13h3t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Dev.fakahani",
+            "certificate_hash": "65b03b1d1d60ca0e17a0701e12ead9985ca8f497"
+          }
+        },
+        {
+          "client_id": "993626480061-gl90rpmu210q2dtg9d3u7fchp98a3kc1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7ap6wSV__8BYaRWHZGDaNPUygHkR-hgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993626480061-gl90rpmu210q2dtg9d3u7fchp98a3kc1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "993626480061-4hma432ue8q9jupnqb929dkdsj9ekugu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Dev.fakahani"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993626480061:android:59b129a8b9e1d63b0d06d4",
+        "android_client_info": {
+          "package_name": "com.Dev.fakahaniDashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993626480061-gl90rpmu210q2dtg9d3u7fchp98a3kc1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7ap6wSV__8BYaRWHZGDaNPUygHkR-hgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993626480061-gl90rpmu210q2dtg9d3u7fchp98a3kc1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "993626480061-4hma432ue8q9jupnqb929dkdsj9ekugu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Dev.fakahani"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
