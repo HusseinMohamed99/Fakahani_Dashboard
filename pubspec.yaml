@@ -5,6 +5,7 @@ environment:
   sdk: '^3.6.1'
 description: Fakahani Dashboard.
 dependencies:
+  bloc: ^9.0.0
   cupertino_icons: ^1.0.8
   firebase_core: ^3.10.1
   flutter:
@@ -13,6 +14,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_screenutil: ^5.9.3
+  get_it: ^8.0.3
   intl: ^0.19.0
   rename: ^3.0.2
 dev_dependencies:
