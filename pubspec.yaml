@@ -7,6 +7,7 @@ description: Fakahani Dashboard.
 dependencies:
   bloc: ^9.0.0
   cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
   firebase_core: ^3.10.1
   flutter:
     sdk: flutter
