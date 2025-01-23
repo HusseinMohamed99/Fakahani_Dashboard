@@ -1,6 +1,7 @@
 import 'package:fakahani_dashboard/core/helpers/extensions/widget_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
 import 'package:fakahani_dashboard/core/widgets/custom_text_form_field.dart';
+import 'package:fakahani_dashboard/features/add_product/presentation/views/widgets/image_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -49,6 +50,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                   controller: productDescriptionController,
                   maxLines: 5,
                 ),
+                const ImageField(),
               ],
             ),
           ),

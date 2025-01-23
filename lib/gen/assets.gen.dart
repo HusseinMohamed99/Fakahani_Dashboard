@@ -59,8 +59,11 @@ class $AssetsImagesGen {
   AssetGenImage get splashAndroid12 =>
       const AssetGenImage('assets/images/splash_android12.png');
 
+  /// File path: assets/images/upload_image.svg
+  String get uploadImage => 'assets/images/upload_image.svg';
+
   /// List of all assets
-  List<AssetGenImage> get values => [splash, splashAndroid12];
+  List<dynamic> get values => [splash, splashAndroid12, uploadImage];
 }
 
 class Assets {
