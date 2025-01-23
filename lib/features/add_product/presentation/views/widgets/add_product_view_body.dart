@@ -5,6 +5,7 @@ import 'package:fakahani_dashboard/core/helpers/extensions/widget_extension.dart
 import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
 import 'package:fakahani_dashboard/core/widgets/custom_button.dart';
 import 'package:fakahani_dashboard/core/widgets/custom_text_form_field.dart';
+import 'package:fakahani_dashboard/features/add_product/domain/entities/add_product_input_entity.dart';
 import 'package:fakahani_dashboard/features/add_product/presentation/views/widgets/image_field.dart';
 import 'package:fakahani_dashboard/features/add_product/presentation/views/widgets/is_featured_item_check_box.dart';
 import 'package:flutter/material.dart';
@@ -102,6 +103,14 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
               if (image != null) {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
+                  AddProductInputEntity input = AddProductInputEntity(
+                    name: name,
+                    code: code,
+                    description: description,
+                    price: price,
+                    isFeaturedItem: isFeatured,
+                    image: image!,
+                  );
                 } else {
                   _autovalidateMode = AutovalidateMode.always;
                   setState(() {});
