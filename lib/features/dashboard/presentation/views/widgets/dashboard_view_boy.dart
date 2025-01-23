@@ -1,5 +1,7 @@
+import 'package:fakahani_dashboard/core/helpers/extensions/navigation_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/widget_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
+import 'package:fakahani_dashboard/core/routing/routes.dart';
 import 'package:fakahani_dashboard/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +15,9 @@ class DashboardViewBoy extends StatelessWidget {
       children: [
         CustomButton(
           text: 'Add Data',
-          onPressed: () {},
+          onPressed: () {
+            context.pushNamed(Routes.addProductView);
+          },
         ),
       ],
     ).allPadding(

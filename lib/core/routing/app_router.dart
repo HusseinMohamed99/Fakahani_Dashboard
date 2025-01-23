@@ -1,4 +1,5 @@
 import 'package:fakahani_dashboard/core/routing/routes.dart';
+import 'package:fakahani_dashboard/features/add_product/presentation/views/add_product_view.dart';
 import 'package:fakahani_dashboard/features/dashboard/presentation/views/dashboard_view.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,10 @@ class AppRouters {
       case Routes.dashboardView:
         return MaterialPageRoute(
           builder: (_) => const DashboardView(),
+        );
+      case Routes.addProductView:
+        return MaterialPageRoute(
+          builder: (_) => const AddProductView(),
         );
     }
 
