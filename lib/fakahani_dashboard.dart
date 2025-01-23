@@ -1,5 +1,6 @@
 import 'package:fakahani_dashboard/core/routing/app_router.dart';
 import 'package:fakahani_dashboard/core/routing/routes.dart';
+import 'package:fakahani_dashboard/core/theming/app_theming/light_theming.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,6 +27,9 @@ class FakahaniDashboard extends StatelessWidget {
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Fakahani Dashboard',
+            theme: buildLightTheming(),
+            themeMode: ThemeMode.light,
+            darkTheme: buildLightTheming(),
             onGenerateRoute: appRouter.generateRoute,
             initialRoute: Routes.dashboardView,
           ),
