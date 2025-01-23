@@ -33,73 +33,83 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: Form(
-            key: _formKey,
-            autovalidateMode: _autovalidateMode,
-            child: Column(
-              spacing: kSpacingDefault.h,
-              children: [
-                CustomTextFormField(
-                  hintText: 'Product Name',
-                  controller: productNameController,
-                  onSaved: (value) {
-                    name = value!;
-                  },
+    return Stack(
+      alignment: Alignment.bottomCenter,
+      children: [
+        CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Form(
+                key: _formKey,
+                autovalidateMode: _autovalidateMode,
+                child: Column(
+                  spacing: kSpacingDefault.h,
+                  children: [
+                    CustomTextFormField(
+                      hintText: 'Product Name',
+                      controller: productNameController,
+                      onSaved: (value) {
+                        name = value!;
+                      },
+                    ),
+                    CustomTextFormField(
+                      hintText: 'Product Price',
+                      controller: productPriceController,
+                      textInputType: TextInputType.number,
+                      onSaved: (value) {
+                        price = num.parse(value!);
+                      },
+                    ),
+                    CustomTextFormField(
+                      hintText: 'Product code',
+                      controller: productCodeController,
+                      textInputType: TextInputType.number,
+                      onSaved: (value) {
+                        code = value!.toLowerCase();
+                      },
+                    ),
+                    CustomTextFormField(
+                      hintText: 'Product Description',
+                      controller: productDescriptionController,
+                      maxLines: 5,
+                      onSaved: (value) {
+                        description = value!;
+                      },
+                    ),
+                    IsFeaturedItemCheckBox(
+                      onTermsAccepted: (value) {
+                        isFeatured = value;
+                      },
+                    ),
+                    ImageField(
+                      onImageSelected: (image) {
+                        this.image = image!;
+                      },
+                    ),
+                  ],
                 ),
-                CustomTextFormField(
-                  hintText: 'Product Price',
-                  controller: productPriceController,
-                  textInputType: TextInputType.number,
-                  onSaved: (value) {
-                    price = num.parse(value!);
-                  },
-                ),
-                CustomTextFormField(
-                  hintText: 'Product code',
-                  controller: productCodeController,
-                  textInputType: TextInputType.number,
-                  onSaved: (value) {
-                    code = value!;
-                  },
-                ),
-                CustomTextFormField(
-                  hintText: 'Product Description',
-                  controller: productDescriptionController,
-                  maxLines: 5,
-                  onSaved: (value) {
-                    description = value!;
-                  },
-                ),
-                IsFeaturedItemCheckBox(
-                  onTermsAccepted: (value) {
-                    isFeatured = value;
-                  },
-                ),
-                ImageField(
-                  onImageSelected: (image) {
-                    this.image = image!;
-                  },
-                ),
-                CustomButton(
-                  text: 'Add Product',
-                  onPressed: () {
-                    if (image != null) {
-                      if (_formKey.currentState!.validate()) {
-                        _formKey.currentState!.save();
-                      } else {
-                        _autovalidateMode = AutovalidateMode.always;
-                        setState(() {});
-                      }
-                    } else {
-                      showError(context);
-                    }
-                  },
-                ),
-              ],
+              ),
             ),
+          ],
+        ),
+        Positioned(
+          bottom: kPaddingDefaultVertical.h,
+          left: 0,
+          right: 0,
+          child: CustomButton(
+            text: 'Add Product',
+            onPressed: () {
+              if (image != null) {
+                if (_formKey.currentState!.validate()) {
+                  _formKey.currentState!.save();
+                } else {
+                  _autovalidateMode = AutovalidateMode.always;
+                  setState(() {});
+                }
+              } else {
+                showError(context);
+              }
+            },
           ),
         ),
       ],
