@@ -52,6 +52,9 @@ class $AssetsFontsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/Check_icon.svg
+  String get checkIcon => 'assets/images/Check_icon.svg';
+
   /// File path: assets/images/splash.png
   AssetGenImage get splash => const AssetGenImage('assets/images/splash.png');
 
@@ -63,7 +66,7 @@ class $AssetsImagesGen {
   String get uploadImage => 'assets/images/upload_image.svg';
 
   /// List of all assets
-  List<dynamic> get values => [splash, splashAndroid12, uploadImage];
+  List<dynamic> get values => [checkIcon, splash, splashAndroid12, uploadImage];
 }
 
 class Assets {
