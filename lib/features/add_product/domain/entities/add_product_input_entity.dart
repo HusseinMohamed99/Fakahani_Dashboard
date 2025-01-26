@@ -16,5 +16,5 @@ class AddProductInputEntity {
   final num price;
   final bool isFeaturedItem;
   final File image;
-  final String? imageURL;
+  String? imageURL;
 }
