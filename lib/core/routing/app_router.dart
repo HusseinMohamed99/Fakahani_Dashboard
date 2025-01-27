@@ -1,7 +1,12 @@
+import 'package:fakahani_dashboard/core/di/dependency_injection.dart';
+import 'package:fakahani_dashboard/core/repos/images_repo/images_repo.dart';
+import 'package:fakahani_dashboard/core/repos/product_repo/product_repo.dart';
 import 'package:fakahani_dashboard/core/routing/routes.dart';
+import 'package:fakahani_dashboard/features/add_product/presentation/logic/cubit/add_product_cubit.dart';
 import 'package:fakahani_dashboard/features/add_product/presentation/views/add_product_view.dart';
 import 'package:fakahani_dashboard/features/dashboard/presentation/views/dashboard_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouters {
   Route? generateRoute(RouteSettings settings) {
@@ -15,7 +20,13 @@ class AppRouters {
         );
       case Routes.addProductView:
         return MaterialPageRoute(
-          builder: (_) => const AddProductView(),
+          builder: (_) => BlocProvider(
+            create: (context) => AddProductCubit(
+              getIt<ImagesRepo>(),
+              getIt<ProductRepo>(),
+            ),
+            child: const AddProductView(),
+          ),
         );
     }
 

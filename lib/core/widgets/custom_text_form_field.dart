@@ -44,9 +44,7 @@ class CustomTextFormField extends StatelessWidget {
             if (value == null || value.trim().isEmpty) {
               return 'This field is required';
             }
-            if (value.length < 3) {
-              return 'This field must be at least 3 characters';
-            }
+
             return null;
           },
       style: TextStyleManager.semiBold16(

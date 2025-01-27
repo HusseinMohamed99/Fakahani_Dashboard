@@ -6,9 +6,11 @@ import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
 import 'package:fakahani_dashboard/core/widgets/custom_button.dart';
 import 'package:fakahani_dashboard/core/widgets/custom_text_form_field.dart';
 import 'package:fakahani_dashboard/features/add_product/domain/entities/add_product_input_entity.dart';
+import 'package:fakahani_dashboard/features/add_product/presentation/logic/cubit/add_product_cubit.dart';
 import 'package:fakahani_dashboard/features/add_product/presentation/views/widgets/image_field.dart';
 import 'package:fakahani_dashboard/features/add_product/presentation/views/widgets/is_featured_item_check_box.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddProductViewBody extends StatefulWidget {
@@ -111,6 +113,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                     isFeaturedItem: isFeatured,
                     image: image!,
                   );
+                  context.read<AddProductCubit>().addProduct(input);
                 } else {
                   _autovalidateMode = AutovalidateMode.always;
                   setState(() {});
