@@ -17,6 +17,8 @@ final getIt = GetIt.instance;
 Future<void> setupGetIt() async {
   await CachingHelper.init();
   getIt.registerSingleton<FirebaseAuthServices>(FirebaseAuthServices());
+  getIt.registerSingleton<DatabaseServices>(FirestoreServices());
+
   getIt.registerSingleton<AuthRepo>(
     AuthRepoImpl(
       firebaseAuthServices: getIt<FirebaseAuthServices>(),
@@ -24,7 +26,6 @@ Future<void> setupGetIt() async {
     ),
   );
   getIt.registerSingleton<StorageService>(SupabaseStorageService());
-  getIt.registerSingleton<DatabaseServices>(FirestoreServices());
   getIt.registerSingleton<ImagesRepo>(
       ImagesRepoImpl(getIt.get<StorageService>()));
   getIt.registerSingleton<ProductRepo>(

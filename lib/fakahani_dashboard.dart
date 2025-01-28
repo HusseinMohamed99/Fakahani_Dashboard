@@ -1,3 +1,4 @@
+import 'package:fakahani_dashboard/core/helpers/constants/keys.dart';
 import 'package:fakahani_dashboard/core/routing/app_router.dart';
 import 'package:fakahani_dashboard/core/routing/routes.dart';
 import 'package:fakahani_dashboard/core/theming/app_theming/light_theming.dart';
@@ -31,10 +32,14 @@ class FakahaniDashboard extends StatelessWidget {
             themeMode: ThemeMode.light,
             darkTheme: buildLightTheming(),
             onGenerateRoute: appRouter.generateRoute,
-            initialRoute: Routes.dashboardView,
+            initialRoute: getInitialRoute(),
           ),
         );
       },
     );
+  }
+
+  String getInitialRoute() {
+    return isLoggedInUser ? Routes.dashboardView : Routes.loginView;
   }
 }

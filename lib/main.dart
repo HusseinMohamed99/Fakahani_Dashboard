@@ -2,6 +2,9 @@ import 'package:bloc/bloc.dart';
 import 'package:fakahani_dashboard/bloc_observer.dart';
 import 'package:fakahani_dashboard/core/di/dependency_injection.dart';
 import 'package:fakahani_dashboard/core/helpers/constants/keys.dart';
+import 'package:fakahani_dashboard/core/helpers/extensions/navigation_extension.dart';
+import 'package:fakahani_dashboard/core/networking/cache/caching_helper.dart';
+import 'package:fakahani_dashboard/core/networking/services/firebase_auth_services.dart';
 import 'package:fakahani_dashboard/core/networking/services/supabase_storage.dart';
 import 'package:fakahani_dashboard/core/routing/app_router.dart';
 import 'package:fakahani_dashboard/fakahani_dashboard.dart';
@@ -29,4 +32,17 @@ Future<void> initServices() async {
   await setupGetIt();
   await ScreenUtil.ensureScreenSize();
   Bloc.observer = MyBlocObserver();
+  await checkIfLoggedInUser();
+}
+
+checkIfLoggedInUser() async {
+  String userToken = await CachingHelper.getSecuredString(
+    SharedPrefKeys.userToken,
+  );
+  var isLoggedIn = FirebaseAuthServices().isLoggedIn();
+  if (!userToken.isNullOrEmpty() && isLoggedIn) {
+    isLoggedInUser = true;
+  } else {
+    isLoggedInUser = false;
+  }
 }
