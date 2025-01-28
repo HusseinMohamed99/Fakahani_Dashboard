@@ -22,18 +22,40 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account_created_successfully": MessageLookupByLibrary.simpleMessage(
+            "Account created successfully"),
+        "account_exists_message": MessageLookupByLibrary.simpleMessage(
+            "An account already exists with a different credential."),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_already_exists":
             MessageLookupByLibrary.simpleMessage("Email already exists"),
+        "email_already_inUse_error": MessageLookupByLibrary.simpleMessage(
+            "The account already exists for that email."),
         "email_empty":
             MessageLookupByLibrary.simpleMessage("Email can\'t be empty"),
+        "email_or_password_incorrect": MessageLookupByLibrary.simpleMessage(
+            "Email or password is incorrect"),
         "email_valid": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid email address"),
+        "forgot_password":
+            MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "full_name_empty":
             MessageLookupByLibrary.simpleMessage("Full name can\'t be empty"),
         "full_name_maximum_length": MessageLookupByLibrary.simpleMessage(
             "Full name must be at most 20 characters"),
         "full_name_minimum_length": MessageLookupByLibrary.simpleMessage(
             "Full name must be at least 3 characters"),
+        "general_error": MessageLookupByLibrary.simpleMessage(
+            "An error occurred, please try again later."),
+        "internal_error_message": MessageLookupByLibrary.simpleMessage(
+            "An internal error occurred. Please try again later."),
+        "invalid_email_message": MessageLookupByLibrary.simpleMessage(
+            "The email address is badly formatted."),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "network_request_failed_message": MessageLookupByLibrary.simpleMessage(
+            "Please check your internet connection"),
+        "operation_not_allowed_message": MessageLookupByLibrary.simpleMessage(
+            "Email/password accounts are not enabled. Please enable it in Firebase."),
         "otp": MessageLookupByLibrary.simpleMessage("OTP"),
         "otp_empty":
             MessageLookupByLibrary.simpleMessage("OTP can\'t be empty"),
@@ -41,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("OTP must be 4 digits"),
         "otp_valid":
             MessageLookupByLibrary.simpleMessage("Please enter a valid OTP"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_does_not_match":
             MessageLookupByLibrary.simpleMessage("Passwords don\'t match"),
         "password_empty":
@@ -62,7 +85,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone_number": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "phone_valid": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid phone number"),
-        "weak_password_error": MessageLookupByLibrary.simpleMessage(
-            "The password provided is too weak.")
+        "sign_in_successfully":
+            MessageLookupByLibrary.simpleMessage("Sign in successfully"),
+        "terms_of_conditions_error": MessageLookupByLibrary.simpleMessage(
+            "You must agree to the terms of conditions."),
+        "too_many_requests_message": MessageLookupByLibrary.simpleMessage(
+            "Too many requests. Please try again later."),
+        "user_disabled_message": MessageLookupByLibrary.simpleMessage(
+            "This user account has been disabled by an administrator."),
+        "user_not_found_message": MessageLookupByLibrary.simpleMessage(
+            "No user found with this email."),
+        "wrong_password_message": MessageLookupByLibrary.simpleMessage(
+            "Incorrect password. Please try again.")
       };
 }

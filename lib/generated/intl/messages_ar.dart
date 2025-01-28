@@ -60,8 +60,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone_empty": MessageLookupByLibrary.simpleMessage(
             "لا يمكن ترك رقم الهاتف فارغًا"),
         "phone_valid":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال رقم هاتف صالح"),
-        "weak_password_error": MessageLookupByLibrary.simpleMessage(
-            "كلمة المرور ضعيفة جدًا. يرجى تقديم كلمة مرور أقوى.")
+            MessageLookupByLibrary.simpleMessage("الرجاء إدخال رقم هاتف صالح")
       };
 }
