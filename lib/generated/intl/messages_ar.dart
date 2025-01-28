@@ -22,18 +22,40 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account_created_successfully":
+            MessageLookupByLibrary.simpleMessage("تم إنشاء الحساب بنجاح"),
+        "account_exists_message": MessageLookupByLibrary.simpleMessage(
+            "يوجد حساب بالفعل ببيانات مختلفة."),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الإلكترونى"),
         "email_already_exists": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني موجود بالفعل"),
+        "email_already_inUse_error": MessageLookupByLibrary.simpleMessage(
+            "عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر."),
         "email_empty": MessageLookupByLibrary.simpleMessage(
             "لا يمكن ترك البريد الإلكترونى فارغًا"),
+        "email_or_password_incorrect": MessageLookupByLibrary.simpleMessage(
+            "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
         "email_valid": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال عنوان بريد إلكتروني صالح"),
+        "forgot_password":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "full_name_empty": MessageLookupByLibrary.simpleMessage(
             "لا يمكن ترك الاسم الكامل فارغًا"),
         "full_name_maximum_length": MessageLookupByLibrary.simpleMessage(
             "يجب أن يحتوي الاسم الكامل على 20 حرفًا كحد أقصى"),
         "full_name_minimum_length": MessageLookupByLibrary.simpleMessage(
             "يجب أن يحتوي الاسم الكامل على 3 أحرف على الأقل"),
+        "general_error": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ غير معروف. يرجى المحاولة لاحقًا."),
+        "internal_error_message": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ داخلي. يرجى المحاولة مرة أخرى لاحقًا."),
+        "invalid_email_message": MessageLookupByLibrary.simpleMessage(
+            "عنوان البريد الإلكتروني بتنسيق غير صحيح."),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "network_request_failed_message": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ في الشبكة. يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى."),
+        "operation_not_allowed_message": MessageLookupByLibrary.simpleMessage(
+            "حسابات البريد الإلكتروني/كلمة المرور غير مفعلّة. الرجاء تفعيلها في Firebase."),
         "otp": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "otp_empty": MessageLookupByLibrary.simpleMessage(
             "لا يمكن ترك رمز التحقق فارغًا"),
@@ -41,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "الرمز التحقق يجب على الأقل 4 رقم"),
         "otp_valid": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال رمز التحقق صالح"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "password_does_not_match":
             MessageLookupByLibrary.simpleMessage("كلمات المرور لا تتطابق"),
         "password_empty": MessageLookupByLibrary.simpleMessage(
@@ -60,6 +83,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone_empty": MessageLookupByLibrary.simpleMessage(
             "لا يمكن ترك رقم الهاتف فارغًا"),
         "phone_valid":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال رقم هاتف صالح")
+            MessageLookupByLibrary.simpleMessage("الرجاء إدخال رقم هاتف صالح"),
+        "sign_in_successfully":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
+        "terms_of_conditions_error": MessageLookupByLibrary.simpleMessage(
+            "يجب عليك الموافقة على الشروط والأحكام."),
+        "too_many_requests_message": MessageLookupByLibrary.simpleMessage(
+            "تم إرسال العديد من الطلبات. يرجى المحاولة لاحقًا."),
+        "user_disabled_message": MessageLookupByLibrary.simpleMessage(
+            "تم تعطيل حساب هذا المستخدم بواسطة المسؤول."),
+        "user_not_found_message": MessageLookupByLibrary.simpleMessage(
+            "لم يتم العثور على حساب باستخدام هذا البريد الإلكتروني."),
+        "wrong_password_message": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور خاطئة. يرجى المحاولة مرة أخرى.")
       };
 }
