@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:fakahani_dashboard/core/helpers/constants/keys.dart';
+import 'package:fakahani_dashboard/core/helpers/functions/app_logs.dart';
 import 'package:fakahani_dashboard/core/networking/services/storage_service.dart';
 import 'package:path/path.dart' as b;
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -16,7 +17,10 @@ class SupabaseStorageService implements StorageService {
         break;
       }
     }
-    if (!isBucketExist) await _supabase.client.storage.createBucket(bucketName);
+    if (!isBucketExist) {
+      await _supabase.client.storage
+          .createBucket(bucketName, const BucketOptions(public: true));
+    }
   }
 
   static initSupabase() async {
@@ -33,6 +37,11 @@ class SupabaseStorageService implements StorageService {
     var result = await _supabase.client.storage
         .from(Buckets.fruitsImage)
         .upload('$path/$fileName', file);
+    final String publicUrl = _supabase.client.storage
+        .from(Buckets.fruitsImage)
+        .getPublicUrl('$path/$fileName');
+    AppLogs.successLog('File uploaded successfully$publicUrl');
+
     return result;
   }
 }
