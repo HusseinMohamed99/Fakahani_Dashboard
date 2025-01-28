@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:fakahani_dashboard/features/add_product/data/models/review_model.dart';
 import 'package:fakahani_dashboard/features/add_product/domain/entities/add_product_input_entity.dart';
 
 class AddProductInputModel {
@@ -19,6 +20,8 @@ class AddProductInputModel {
       isOrganic: addProductInputEntity.isOrganic,
       avgRating: addProductInputEntity.avgRating,
       ratingCount: addProductInputEntity.ratingCount,
+      reviews:
+          addProductInputEntity.reviews.map(ReviewModel.fromEntity).toList(),
     );
   }
   AddProductInputModel({
@@ -35,6 +38,7 @@ class AddProductInputModel {
     this.isOrganic = false,
     this.avgRating = 0,
     this.ratingCount = 0,
+    required this.reviews,
   });
 
   final String name;
@@ -50,6 +54,7 @@ class AddProductInputModel {
   final bool isOrganic;
   final num avgRating;
   final int ratingCount;
+  final List<ReviewModel> reviews;
   toJson() => {
         'name': name,
         'code': code,
@@ -63,5 +68,6 @@ class AddProductInputModel {
         'isOrganic': isOrganic,
         'avgRating': avgRating,
         'ratingCount': ratingCount,
+        'reviews': reviews.map((e) => e.toJson()).toList(),
       };
 }

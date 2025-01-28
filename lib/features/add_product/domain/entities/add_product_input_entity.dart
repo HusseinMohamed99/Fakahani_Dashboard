@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:fakahani_dashboard/features/add_product/domain/entities/review_entity.dart';
+
 class AddProductInputEntity {
   AddProductInputEntity({
     required this.name,
@@ -15,6 +17,7 @@ class AddProductInputEntity {
     this.isOrganic = false,
     this.avgRating = 0,
     this.ratingCount = 0,
+    required this.reviews,
   });
 
   final String name;
@@ -30,4 +33,5 @@ class AddProductInputEntity {
   final bool isOrganic;
   final num avgRating;
   final int ratingCount;
+  final List<ReviewEntity> reviews;
 }
