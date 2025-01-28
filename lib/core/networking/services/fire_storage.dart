@@ -9,8 +9,7 @@ class FireStorage implements StorageService {
   @override
   Future<String> uploadFile(File file, String path) async {
     String fileName = b.basename(file.path);
-    String extensionName = b.extension(file.path);
-    var fileReference = firebaseStorage.child('$path/$fileName.$extensionName');
+    var fileReference = firebaseStorage.child('$path/$fileName');
     await fileReference.putFile(file);
     var fileURL = fileReference.getDownloadURL();
     return fileURL;
