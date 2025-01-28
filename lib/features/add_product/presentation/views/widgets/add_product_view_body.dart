@@ -28,10 +28,16 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
       TextEditingController();
   final TextEditingController productPriceController = TextEditingController();
   final TextEditingController productCodeController = TextEditingController();
+  final TextEditingController expiryMonthController = TextEditingController();
+  final TextEditingController numberOfCaloriesController =
+      TextEditingController();
+  final TextEditingController uintAmountController = TextEditingController();
 
   late String name, code, description;
-  late num price;
+  late num price, expiryMonth, numberOfCalories, uintAmount;
   bool isFeatured = false;
+  bool isOrganic = false;
+
   File? image;
 
   @override
@@ -49,14 +55,14 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                   spacing: kSpacingDefault.h,
                   children: [
                     CustomTextFormField(
-                      hintText: 'Product Name',
+                      hintText: 'Name',
                       controller: productNameController,
                       onSaved: (value) {
                         name = value!;
                       },
                     ),
                     CustomTextFormField(
-                      hintText: 'Product Price',
+                      hintText: 'Price',
                       controller: productPriceController,
                       textInputType: TextInputType.number,
                       onSaved: (value) {
@@ -64,7 +70,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                       },
                     ),
                     CustomTextFormField(
-                      hintText: 'Product code',
+                      hintText: 'Code',
                       controller: productCodeController,
                       textInputType: TextInputType.number,
                       onSaved: (value) {
@@ -72,17 +78,48 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                       },
                     ),
                     CustomTextFormField(
-                      hintText: 'Product Description',
+                      hintText: 'Expiry Month',
+                      controller: expiryMonthController,
+                      textInputType: TextInputType.number,
+                      onSaved: (value) {
+                        expiryMonth = num.parse(value!);
+                      },
+                    ),
+                    CustomTextFormField(
+                      hintText: 'Number of Calories',
+                      controller: numberOfCaloriesController,
+                      textInputType: TextInputType.number,
+                      onSaved: (value) {
+                        numberOfCalories = num.parse(value!);
+                      },
+                    ),
+                    CustomTextFormField(
+                      hintText: 'Unit Amount',
+                      controller: uintAmountController,
+                      textInputType: TextInputType.number,
+                      onSaved: (value) {
+                        uintAmount = num.parse(value!);
+                      },
+                    ),
+                    CustomTextFormField(
+                      hintText: 'Description',
                       controller: productDescriptionController,
                       maxLines: 5,
                       onSaved: (value) {
                         description = value!;
                       },
                     ),
-                    IsFeaturedItemCheckBox(
+                    ItemCheckBox(
                       onTermsAccepted: (value) {
                         isFeatured = value;
                       },
+                      title: 'is Feature Item ?',
+                    ),
+                    ItemCheckBox(
+                      onTermsAccepted: (value) {
+                        isOrganic = value;
+                      },
+                      title: 'is Organic ?',
                     ),
                     ImageField(
                       onImageSelected: (image) {
@@ -112,6 +149,10 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                     price: price,
                     isFeaturedItem: isFeatured,
                     image: image!,
+                    expiryMonth: expiryMonth.toInt(),
+                    numberOfCalories: numberOfCalories.toInt(),
+                    uintAmount: uintAmount.toInt(),
+                    isOrganic: isOrganic,
                   );
                   context.read<AddProductCubit>().addProduct(input);
                 } else {

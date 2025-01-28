@@ -12,6 +12,9 @@ class AddProductInputEntity {
     required this.expiryMonth,
     required this.numberOfCalories,
     required this.uintAmount,
+    this.isOrganic = false,
+    this.avgRating = 0,
+    this.ratingCount = 0,
   });
 
   final String name;
@@ -24,7 +27,7 @@ class AddProductInputEntity {
   final int expiryMonth;
   final int numberOfCalories;
   final int uintAmount;
-  final bool isOrganic = false;
-  final num avgRating = 0;
-  final int ratingCount = 0;
+  final bool isOrganic;
+  final num avgRating;
+  final int ratingCount;
 }

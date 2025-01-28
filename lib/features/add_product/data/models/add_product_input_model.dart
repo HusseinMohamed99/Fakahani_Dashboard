@@ -13,16 +13,29 @@ class AddProductInputModel {
       isFeaturedItem: addProductInputEntity.isFeaturedItem,
       image: addProductInputEntity.image,
       imageURL: addProductInputEntity.imageURL,
+      expiryMonth: addProductInputEntity.expiryMonth,
+      numberOfCalories: addProductInputEntity.numberOfCalories,
+      uintAmount: addProductInputEntity.uintAmount,
+      isOrganic: addProductInputEntity.isOrganic,
+      avgRating: addProductInputEntity.avgRating,
+      ratingCount: addProductInputEntity.ratingCount,
     );
   }
-  AddProductInputModel(
-      {required this.name,
-      required this.code,
-      required this.description,
-      required this.price,
-      required this.isFeaturedItem,
-      required this.image,
-      this.imageURL});
+  AddProductInputModel({
+    required this.name,
+    required this.code,
+    required this.description,
+    required this.price,
+    required this.isFeaturedItem,
+    required this.image,
+    this.imageURL,
+    required this.expiryMonth,
+    required this.numberOfCalories,
+    required this.uintAmount,
+    this.isOrganic = false,
+    this.avgRating = 0,
+    this.ratingCount = 0,
+  });
 
   final String name;
   final String code;
@@ -31,7 +44,12 @@ class AddProductInputModel {
   final bool isFeaturedItem;
   final File image;
   String? imageURL;
-
+  final int expiryMonth;
+  final int numberOfCalories;
+  final int uintAmount;
+  final bool isOrganic;
+  final num avgRating;
+  final int ratingCount;
   toJson() => {
         'name': name,
         'code': code,
@@ -39,5 +57,11 @@ class AddProductInputModel {
         'price': price,
         'isFeaturedItem': isFeaturedItem,
         'imageURL': imageURL,
+        'expiryMonth': expiryMonth,
+        'numberOfCalories': numberOfCalories,
+        'uintAmount': uintAmount,
+        'isOrganic': isOrganic,
+        'avgRating': avgRating,
+        'ratingCount': ratingCount,
       };
 }
