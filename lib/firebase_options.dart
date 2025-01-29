@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,9 +41,9 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBfFTcQnI183nLjJ4La0qf7rWCBGgQYE9I',
-    appId: '1:993626480061:web:575b86717c78ef400d06d4',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['firebaseApiKeyWeb']!,
+    appId: dotenv.env['firebaseAppIdWeb']!,
     messagingSenderId: '993626480061',
     projectId: 'fakahani-73130',
     authDomain: 'fakahani-73130.firebaseapp.com',
@@ -50,44 +51,47 @@ class DefaultFirebaseOptions {
     measurementId: 'G-KX9XYYNMWD',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD7ap6wSV__8BYaRWHZGDaNPUygHkR-hgY',
-    appId: '1:993626480061:android:59b129a8b9e1d63b0d06d4',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['firebaseApiKeyAndroid']!,
+    appId: dotenv.env['firebaseAppIdAndroid']!,
     messagingSenderId: '993626480061',
     projectId: 'fakahani-73130',
     storageBucket: 'fakahani-73130.firebasestorage.app',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA0fZHsfh5lgE8LtgVJe04b2w93zUgA9sg',
-    appId: '1:993626480061:ios:1d7a594f5af2e62d0d06d4',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['firebaseApiKeyIos']!,
+    appId: dotenv.env['firebaseAppIdIos']!,
     messagingSenderId: '993626480061',
     projectId: 'fakahani-73130',
     storageBucket: 'fakahani-73130.firebasestorage.app',
-    androidClientId: '993626480061-4d77v771203tutcjldrb4vbmvjk13h3t.apps.googleusercontent.com',
-    iosClientId: '993626480061-lf3db293nqurkff7bvhm1s5faj6sm52f.apps.googleusercontent.com',
+    androidClientId:
+        '993626480061-4d77v771203tutcjldrb4vbmvjk13h3t.apps.googleusercontent.com',
+    iosClientId:
+        '993626480061-lf3db293nqurkff7bvhm1s5faj6sm52f.apps.googleusercontent.com',
     iosBundleId: 'com.Dev.fakahaniDashboard',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyA0fZHsfh5lgE8LtgVJe04b2w93zUgA9sg',
-    appId: '1:993626480061:ios:1d7a594f5af2e62d0d06d4',
+  static FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.env['firebaseApiKeyMacOs']!,
+    appId: dotenv.env['firebaseAppIdMacOs']!,
     messagingSenderId: '993626480061',
     projectId: 'fakahani-73130',
     storageBucket: 'fakahani-73130.firebasestorage.app',
-    androidClientId: '993626480061-4d77v771203tutcjldrb4vbmvjk13h3t.apps.googleusercontent.com',
-    iosClientId: '993626480061-lf3db293nqurkff7bvhm1s5faj6sm52f.apps.googleusercontent.com',
+    androidClientId:
+        '993626480061-4d77v771203tutcjldrb4vbmvjk13h3t.apps.googleusercontent.com',
+    iosClientId:
+        '993626480061-lf3db293nqurkff7bvhm1s5faj6sm52f.apps.googleusercontent.com',
     iosBundleId: 'com.Dev.fakahaniDashboard',
   );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBfFTcQnI183nLjJ4La0qf7rWCBGgQYE9I',
-    appId: '1:993626480061:web:49e9d0e5df0ed54e0d06d4',
+  static FirebaseOptions windows = FirebaseOptions(
+    apiKey: dotenv.env['firebaseApiKeyWindows']!,
+    appId: dotenv.env['firebaseAppIdWindows']!,
     messagingSenderId: '993626480061',
     projectId: 'fakahani-73130',
     authDomain: 'fakahani-73130.firebaseapp.com',
     storageBucket: 'fakahani-73130.firebasestorage.app',
     measurementId: 'G-1W4LP6WBKN',
   );
-
 }
