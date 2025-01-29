@@ -19,7 +19,8 @@ class FirebaseAuthServices {
       return credential.user!;
     } on FirebaseAuthException catch (e) {
       AppLogs.errorLog(
-        'FirebaseAuthServices.signInWithEmailAndPassword Exception: ${e.toString()} "Error code: ${e.code}"',
+        '''FirebaseAuthServices.signInWithEmailAndPassword Exception: ${e.toString()}
+         "Error code: ${e.code}"''',
         'Auth',
       );
       if (e.code == 'wrong-password') {
@@ -59,9 +60,8 @@ class FirebaseAuthServices {
             message: authErrorMessages.generalErrorMessage ?? '');
       }
     } catch (e) {
-      AppLogs.errorLog(
-          'FirebaseAuthServices.signInWithEmailAndPassword Exception: ${e.toString()} ',
-          'Auth');
+      AppLogs.errorLog('''FirebaseAuthServices.signInWithEmailAndPassword
+           Exception: ${e.toString()} ''', 'Auth');
       throw CustomException(
           message: authErrorMessages.generalErrorMessage ?? '');
     }
