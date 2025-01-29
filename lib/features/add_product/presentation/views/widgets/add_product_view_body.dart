@@ -86,7 +86,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
           title: const Text('Second'),
           content: Form(
             key: _formKeySecond,
-            // autovalidateMode: _autovalidateMode,
+            autovalidateMode: _autovalidateMode,
             child: Column(
               spacing: kSpacingDefault.h,
               children: [
@@ -124,7 +124,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
           title: const Text('Third'),
           content: Form(
             key: _formKeyThird,
-            // autovalidateMode: _autovalidateMode,
+            autovalidateMode: _autovalidateMode,
             child: Column(
               spacing: kSpacingDefault.h,
               children: [
@@ -259,28 +259,3 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
     );
   }
 }
- // CustomButton(
-        //   text: context.localization.add_product,
-        //   onPressed: () {
-        //     if (_formKey.currentState!.validate()) {
-        //       _formKey.currentState!.save();
-        //       AddProductInputEntity input = AddProductInputEntity(
-        //         name: name,
-        //         code: code,
-        //         description: description,
-        //         price: price,
-        //         isFeaturedItem: isFeatured,
-        //         image: image!,
-        //         expiryMonth: expiryMonth.toInt(),
-        //         numberOfCalories: numberOfCalories.toInt(),
-        //         uintAmount: uintAmount.toInt(),
-        //         isOrganic: isOrganic,
-        //         reviews: [],
-        //       );
-        //       context.read<AddProductCubit>().addProduct(input);
-        //     } else {
-        //       _autovalidateMode = AutovalidateMode.always;
-        //       setState(() {});
-        //     }
-        //   },
-        // ),
