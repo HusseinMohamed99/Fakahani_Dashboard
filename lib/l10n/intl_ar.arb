@@ -1,5 +1,11 @@
 {
       "@@locale": "ar",
+      "app_title": "فكهانى",
+      "@app_title": {},
+      "faka": "فكـ",
+      "@faka": {},
+      "hani": "هانى",
+      "@hani": {},
       "login":"تسجيل الدخول",
       "@login": {},
       "email": "البريد الإلكترونى",
@@ -79,5 +85,15 @@
       "sign_in_successfully": "تم تسجيل الدخول بنجاح",
       "@sign_in_successfully": {},
       "account_exists_message": "يوجد حساب بالفعل ببيانات مختلفة.",
-      "@account_exists_message": {}
+      "@account_exists_message": {},
+      "start_now":"ابدأ الآن",
+      "@start_now": {},
+      "welcome":"مرحبًا بك ",
+      "@welcome": {},
+      "to":"في",
+      "@to": {},
+      "welcome_subtitle_first":"يسعدنا أن نرى ما ستضيفه! املأ التفاصيل أدناه، ولا تنس تحميل بعض الصور الرائعة.",
+      "@welcome_subtitle_first": {},
+      "welcome_subtitle_second":"سيكون منتجك جاهزًا للعملاء في بضع خطوات فقط.",
+      "@welcome_subtitle_second": {}
 }

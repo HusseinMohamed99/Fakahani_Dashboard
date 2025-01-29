@@ -50,6 +50,36 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Fakahani`
+  String get app_title {
+    return Intl.message(
+      'Fakahani',
+      name: 'app_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Faka`
+  String get faka {
+    return Intl.message(
+      'Faka',
+      name: 'faka',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hani`
+  String get hani {
+    return Intl.message(
+      'Hani',
+      name: 'hani',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Login`
   String get login {
     return Intl.message(
@@ -445,6 +475,56 @@ class S {
     return Intl.message(
       'An account already exists with a different credential.',
       name: 'account_exists_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome`
+  String get welcome {
+    return Intl.message(
+      'Welcome',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To`
+  String get to {
+    return Intl.message(
+      'To',
+      name: 'to',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We’re excited to see what you’re adding! Fill in the details below, and don’t forget to upload some great images`
+  String get welcome_subtitle_first {
+    return Intl.message(
+      'We’re excited to see what you’re adding! Fill in the details below, and don’t forget to upload some great images',
+      name: 'welcome_subtitle_first',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your product will be live and ready for customers in just a few steps.`
+  String get welcome_subtitle_second {
+    return Intl.message(
+      'Your product will be live and ready for customers in just a few steps.',
+      name: 'welcome_subtitle_second',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Now`
+  String get start_now {
+    return Intl.message(
+      'Start Now',
+      name: 'start_now',
       desc: '',
       args: [],
     );

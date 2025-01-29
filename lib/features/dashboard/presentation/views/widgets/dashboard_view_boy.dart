@@ -1,6 +1,8 @@
+import 'package:fakahani_dashboard/core/helpers/extensions/localization_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/navigation_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/responsive_size_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/widget_extension.dart';
+import 'package:fakahani_dashboard/core/helpers/responsive/spacing.dart';
 import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
 import 'package:fakahani_dashboard/core/routing/routes.dart';
 import 'package:fakahani_dashboard/core/theming/color_manager/color_manager.dart';
@@ -64,30 +66,29 @@ class WelcomeText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      spacing: kSpacingXLarge.h,
       children: [
         RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
             children: [
               TextSpan(
-                text: 'Welcome ',
+                text: '${context.localization.welcome} ',
                 style: TextStyleManager.bold19(context: context),
               ),
               TextSpan(
-                text: 'to ',
+                text: '${context.localization.to} ',
                 style: TextStyleManager.bold19(context: context).copyWith(
                   color: ColorManager.vibrantOrange,
                 ),
               ),
               TextSpan(
-                text: 'Faka',
+                text: context.localization.faka,
                 style: TextStyleManager.bold19(context: context).copyWith(
                   color: ColorManager.primaryGreen,
                 ),
               ),
               TextSpan(
-                text: 'hani',
+                text: context.localization.hani,
                 style: TextStyleManager.bold19(context: context).copyWith(
                   color: ColorManager.vibrantOrange,
                 ),
@@ -96,17 +97,33 @@ class WelcomeText extends StatelessWidget {
             style: TextStyleManager.bold23(context: context),
           ),
         ),
-        Text(
-          '''We’re excited to see what you’re adding! Fill in the details below, and don’t forget
-           to upload some great images.
-        Your product will be live and ready for customers in just a few steps.''',
-          style: TextStyleManager.semiBold13(context: context),
-          textAlign: TextAlign.center,
+        verticalSpacing(kSpacingXLarge),
+        SubtitleText(
+          text: context.localization.welcome_subtitle_first,
+        ),
+        SubtitleText(
+          text: context.localization.welcome_subtitle_second,
         ),
       ],
     ).allPadding(
       vPadding: kPaddingLargeHorizontal.h,
       hPadding: kPaddingDefaultVertical.w,
+    );
+  }
+}
+
+class SubtitleText extends StatelessWidget {
+  const SubtitleText({
+    super.key,
+    required this.text,
+  });
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: TextStyleManager.semiBold13(context: context),
+      textAlign: TextAlign.center,
     );
   }
 }

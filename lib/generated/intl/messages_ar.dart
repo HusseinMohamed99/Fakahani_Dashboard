@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم إنشاء الحساب بنجاح"),
         "account_exists_message": MessageLookupByLibrary.simpleMessage(
             "يوجد حساب بالفعل ببيانات مختلفة."),
+        "app_title": MessageLookupByLibrary.simpleMessage("فكهانى"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكترونى"),
         "email_already_exists": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني موجود بالفعل"),
@@ -37,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
         "email_valid": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال عنوان بريد إلكتروني صالح"),
+        "faka": MessageLookupByLibrary.simpleMessage("فكـ"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "full_name_empty": MessageLookupByLibrary.simpleMessage(
@@ -47,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "يجب أن يحتوي الاسم الكامل على 3 أحرف على الأقل"),
         "general_error": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ غير معروف. يرجى المحاولة لاحقًا."),
+        "hani": MessageLookupByLibrary.simpleMessage("هانى"),
         "internal_error_message": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ داخلي. يرجى المحاولة مرة أخرى لاحقًا."),
         "invalid_email_message": MessageLookupByLibrary.simpleMessage(
@@ -86,14 +89,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرجاء إدخال رقم هاتف صالح"),
         "sign_in_successfully":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
+        "start_now": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "terms_of_conditions_error": MessageLookupByLibrary.simpleMessage(
             "يجب عليك الموافقة على الشروط والأحكام."),
+        "to": MessageLookupByLibrary.simpleMessage("في"),
         "too_many_requests_message": MessageLookupByLibrary.simpleMessage(
             "تم إرسال العديد من الطلبات. يرجى المحاولة لاحقًا."),
         "user_disabled_message": MessageLookupByLibrary.simpleMessage(
             "تم تعطيل حساب هذا المستخدم بواسطة المسؤول."),
         "user_not_found_message": MessageLookupByLibrary.simpleMessage(
             "لم يتم العثور على حساب باستخدام هذا البريد الإلكتروني."),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحبًا بك "),
+        "welcome_subtitle_first": MessageLookupByLibrary.simpleMessage(
+            "يسعدنا أن نرى ما ستضيفه! املأ التفاصيل أدناه، ولا تنس تحميل بعض الصور الرائعة."),
+        "welcome_subtitle_second": MessageLookupByLibrary.simpleMessage(
+            "سيكون منتجك جاهزًا للعملاء في بضع خطوات فقط."),
         "wrong_password_message": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور خاطئة. يرجى المحاولة مرة أخرى.")
       };

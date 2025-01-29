@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Account created successfully"),
         "account_exists_message": MessageLookupByLibrary.simpleMessage(
             "An account already exists with a different credential."),
+        "app_title": MessageLookupByLibrary.simpleMessage("Fakahani"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_already_exists":
             MessageLookupByLibrary.simpleMessage("Email already exists"),
@@ -37,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Email or password is incorrect"),
         "email_valid": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid email address"),
+        "faka": MessageLookupByLibrary.simpleMessage("Faka"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "full_name_empty":
@@ -47,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Full name must be at least 3 characters"),
         "general_error": MessageLookupByLibrary.simpleMessage(
             "An error occurred, please try again later."),
+        "hani": MessageLookupByLibrary.simpleMessage("Hani"),
         "internal_error_message": MessageLookupByLibrary.simpleMessage(
             "An internal error occurred. Please try again later."),
         "invalid_email_message": MessageLookupByLibrary.simpleMessage(
@@ -87,14 +90,21 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please enter a valid phone number"),
         "sign_in_successfully":
             MessageLookupByLibrary.simpleMessage("Sign in successfully"),
+        "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
         "terms_of_conditions_error": MessageLookupByLibrary.simpleMessage(
             "You must agree to the terms of conditions."),
+        "to": MessageLookupByLibrary.simpleMessage("To"),
         "too_many_requests_message": MessageLookupByLibrary.simpleMessage(
             "Too many requests. Please try again later."),
         "user_disabled_message": MessageLookupByLibrary.simpleMessage(
             "This user account has been disabled by an administrator."),
         "user_not_found_message": MessageLookupByLibrary.simpleMessage(
             "No user found with this email."),
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
+        "welcome_subtitle_first": MessageLookupByLibrary.simpleMessage(
+            "We’re excited to see what you’re adding! Fill in the details below, and don’t forget to upload some great images"),
+        "welcome_subtitle_second": MessageLookupByLibrary.simpleMessage(
+            "Your product will be live and ready for customers in just a few steps."),
         "wrong_password_message": MessageLookupByLibrary.simpleMessage(
             "Incorrect password. Please try again.")
       };

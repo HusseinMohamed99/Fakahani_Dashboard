@@ -1,5 +1,11 @@
 {
       "@@locale": "en",
+      "app_title": "Fakahani",
+      "@app_title": {},
+      "faka": "Faka",
+      "@faka": {},
+      "hani": "Hani",
+      "@hani": {},
       "login":"Login",
       "@login": {},
       "email": "Email",
@@ -50,7 +56,6 @@
       "@otp": {},
       "phone_number":"Phone Number",
       "@phone_number": {},
-    
       "email_already_inUse_error":"The account already exists for that email.",
       "@email_already_inUse_error": {},
       "general_error":"An error occurred, please try again later.",
@@ -80,5 +85,15 @@
       "sign_in_successfully":"Sign in successfully",
       "@sign_in_successfully": {},
       "account_exists_message": "An account already exists with a different credential.",
-      "@account_exists_message": {}
+      "@account_exists_message": {},
+      "welcome":"Welcome",
+      "@welcome": {},
+      "to":"To",
+      "@to": {},
+      "welcome_subtitle_first":"We’re excited to see what you’re adding! Fill in the details below, and don’t forget to upload some great images",
+      "@welcome_subtitle_first": {},
+      "welcome_subtitle_second":"Your product will be live and ready for customers in just a few steps.",
+      "@welcome_subtitle_second": {}, 
+      "start_now":"Start Now",
+      "@start_now": {}
 }
