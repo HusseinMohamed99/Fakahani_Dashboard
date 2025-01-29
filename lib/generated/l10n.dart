@@ -529,6 +529,126 @@ class S {
       args: [],
     );
   }
+
+  /// `Add Product`
+  String get add_product {
+    return Intl.message(
+      'Add Product',
+      name: 'add_product',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Name`
+  String get product_name {
+    return Intl.message(
+      'Product Name',
+      name: 'product_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Description`
+  String get product_description {
+    return Intl.message(
+      'Product Description',
+      name: 'product_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Price`
+  String get product_price {
+    return Intl.message(
+      'Product Price',
+      name: 'product_price',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Code`
+  String get product_code {
+    return Intl.message(
+      'Product Code',
+      name: 'product_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expiry Month`
+  String get expiry_month {
+    return Intl.message(
+      'Expiry Month',
+      name: 'expiry_month',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Number of Calories`
+  String get number_of_calories {
+    return Intl.message(
+      'Number of Calories',
+      name: 'number_of_calories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unit Amount`
+  String get unit_amount {
+    return Intl.message(
+      'Unit Amount',
+      name: 'unit_amount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Is Featured Item ?`
+  String get is_featured_item {
+    return Intl.message(
+      'Is Featured Item ?',
+      name: 'is_featured_item',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Is Organic ?`
+  String get is_organic {
+    return Intl.message(
+      'Is Organic ?',
+      name: 'is_organic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product added successfully`
+  String get product_added_successfully {
+    return Intl.message(
+      'Product added successfully',
+      name: 'product_added_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select an image`
+  String get select_image_error {
+    return Intl.message(
+      'Please select an image',
+      name: 'select_image_error',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

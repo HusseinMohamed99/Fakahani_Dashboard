@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:fakahani_dashboard/core/helpers/extensions/localization_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/snack_bar_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/widget_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
@@ -55,14 +56,14 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                   spacing: kSpacingDefault.h,
                   children: [
                     CustomTextFormField(
-                      hintText: 'Name',
+                      hintText: context.localization.product_name,
                       controller: productNameController,
                       onSaved: (value) {
                         name = value!;
                       },
                     ),
                     CustomTextFormField(
-                      hintText: 'Price',
+                      hintText: context.localization.product_price,
                       controller: productPriceController,
                       textInputType: TextInputType.number,
                       onSaved: (value) {
@@ -70,7 +71,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                       },
                     ),
                     CustomTextFormField(
-                      hintText: 'Code',
+                      hintText: context.localization.product_code,
                       controller: productCodeController,
                       textInputType: TextInputType.number,
                       onSaved: (value) {
@@ -78,7 +79,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                       },
                     ),
                     CustomTextFormField(
-                      hintText: 'Expiry Month',
+                      hintText: context.localization.expiry_month,
                       controller: expiryMonthController,
                       textInputType: TextInputType.number,
                       onSaved: (value) {
@@ -86,7 +87,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                       },
                     ),
                     CustomTextFormField(
-                      hintText: 'Number of Calories',
+                      hintText: context.localization.number_of_calories,
                       controller: numberOfCaloriesController,
                       textInputType: TextInputType.number,
                       onSaved: (value) {
@@ -94,7 +95,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                       },
                     ),
                     CustomTextFormField(
-                      hintText: 'Unit Amount',
+                      hintText: context.localization.unit_amount,
                       controller: uintAmountController,
                       textInputType: TextInputType.number,
                       onSaved: (value) {
@@ -102,7 +103,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                       },
                     ),
                     CustomTextFormField(
-                      hintText: 'Description',
+                      hintText: context.localization.product_description,
                       controller: productDescriptionController,
                       maxLines: 5,
                       onSaved: (value) {
@@ -113,13 +114,13 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                       onTermsAccepted: (value) {
                         isFeatured = value;
                       },
-                      title: 'is Feature Item ?',
+                      title: context.localization.is_featured_item,
                     ),
                     ItemCheckBox(
                       onTermsAccepted: (value) {
                         isOrganic = value;
                       },
-                      title: 'is Organic ?',
+                      title: context.localization.is_organic,
                     ),
                     ImageField(
                       onImageSelected: (image) {
@@ -137,7 +138,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
           left: 0,
           right: 0,
           child: CustomButton(
-            text: 'Add Product',
+            text: context.localization.add_product,
             onPressed: () {
               if (image != null) {
                 if (_formKey.currentState!.validate()) {
@@ -175,7 +176,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
 
   void showError(BuildContext context) {
     context.showSnackBar(
-      'Please select an image',
+      context.localization.select_image_error,
     );
   }
 }

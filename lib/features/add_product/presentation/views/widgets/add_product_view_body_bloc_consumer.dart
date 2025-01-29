@@ -1,3 +1,4 @@
+import 'package:fakahani_dashboard/core/helpers/extensions/localization_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/snack_bar_extension.dart';
 import 'package:fakahani_dashboard/core/widgets/custom_loading_indicator.dart';
 import 'package:fakahani_dashboard/features/add_product/presentation/logic/cubit/add_product_cubit.dart';
@@ -16,7 +17,7 @@ class AddProductViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<AddProductCubit, AddProductState>(
       listener: (context, state) {
         if (state is AddProductSuccess) {
-          context.showSnackBar('Product added successfully');
+          context.showSnackBar(context.localization.product_added_successfully);
         } else if (state is AddProductFailure) {
           context.showSnackBar(state.message);
         }

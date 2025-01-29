@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم إنشاء الحساب بنجاح"),
         "account_exists_message": MessageLookupByLibrary.simpleMessage(
             "يوجد حساب بالفعل ببيانات مختلفة."),
+        "add_product": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
         "app_title": MessageLookupByLibrary.simpleMessage("فكهانى"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكترونى"),
         "email_already_exists": MessageLookupByLibrary.simpleMessage(
@@ -38,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
         "email_valid": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال عنوان بريد إلكتروني صالح"),
+        "expiry_month": MessageLookupByLibrary.simpleMessage("شهر الانتهاء"),
         "faka": MessageLookupByLibrary.simpleMessage("فكـ"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
@@ -54,9 +56,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "حدث خطأ داخلي. يرجى المحاولة مرة أخرى لاحقًا."),
         "invalid_email_message": MessageLookupByLibrary.simpleMessage(
             "عنوان البريد الإلكتروني بتنسيق غير صحيح."),
+        "is_featured_item":
+            MessageLookupByLibrary.simpleMessage("هل هو منتج مميز؟"),
+        "is_organic": MessageLookupByLibrary.simpleMessage("هل هو منتج عضوى؟"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "network_request_failed_message": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ في الشبكة. يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى."),
+        "number_of_calories":
+            MessageLookupByLibrary.simpleMessage("عدد السعرات الحرارية"),
         "operation_not_allowed_message": MessageLookupByLibrary.simpleMessage(
             "حسابات البريد الإلكتروني/كلمة المرور غير مفعلّة. الرجاء تفعيلها في Firebase."),
         "otp": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
@@ -87,6 +94,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "لا يمكن ترك رقم الهاتف فارغًا"),
         "phone_valid":
             MessageLookupByLibrary.simpleMessage("الرجاء إدخال رقم هاتف صالح"),
+        "product_added_successfully":
+            MessageLookupByLibrary.simpleMessage("تمت إضافة المنتج بنجاح"),
+        "product_code": MessageLookupByLibrary.simpleMessage("كود المنتج"),
+        "product_description":
+            MessageLookupByLibrary.simpleMessage("وصف المنتج"),
+        "product_name": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
+        "product_price": MessageLookupByLibrary.simpleMessage("سعر المنتج"),
+        "select_image_error":
+            MessageLookupByLibrary.simpleMessage("الرجاء اختيار صورة"),
         "sign_in_successfully":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "start_now": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
@@ -95,6 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "to": MessageLookupByLibrary.simpleMessage("في"),
         "too_many_requests_message": MessageLookupByLibrary.simpleMessage(
             "تم إرسال العديد من الطلبات. يرجى المحاولة لاحقًا."),
+        "unit_amount": MessageLookupByLibrary.simpleMessage("لكل كام جرام"),
         "user_disabled_message": MessageLookupByLibrary.simpleMessage(
             "تم تعطيل حساب هذا المستخدم بواسطة المسؤول."),
         "user_not_found_message": MessageLookupByLibrary.simpleMessage(

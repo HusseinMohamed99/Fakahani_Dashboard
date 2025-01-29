@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Account created successfully"),
         "account_exists_message": MessageLookupByLibrary.simpleMessage(
             "An account already exists with a different credential."),
+        "add_product": MessageLookupByLibrary.simpleMessage("Add Product"),
         "app_title": MessageLookupByLibrary.simpleMessage("Fakahani"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_already_exists":
@@ -38,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Email or password is incorrect"),
         "email_valid": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid email address"),
+        "expiry_month": MessageLookupByLibrary.simpleMessage("Expiry Month"),
         "faka": MessageLookupByLibrary.simpleMessage("Faka"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
@@ -54,9 +56,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "An internal error occurred. Please try again later."),
         "invalid_email_message": MessageLookupByLibrary.simpleMessage(
             "The email address is badly formatted."),
+        "is_featured_item":
+            MessageLookupByLibrary.simpleMessage("Is Featured Item ?"),
+        "is_organic": MessageLookupByLibrary.simpleMessage("Is Organic ?"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "network_request_failed_message": MessageLookupByLibrary.simpleMessage(
             "Please check your internet connection"),
+        "number_of_calories":
+            MessageLookupByLibrary.simpleMessage("Number of Calories"),
         "operation_not_allowed_message": MessageLookupByLibrary.simpleMessage(
             "Email/password accounts are not enabled. Please enable it in Firebase."),
         "otp": MessageLookupByLibrary.simpleMessage("OTP"),
@@ -88,6 +95,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone_number": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "phone_valid": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid phone number"),
+        "product_added_successfully":
+            MessageLookupByLibrary.simpleMessage("Product added successfully"),
+        "product_code": MessageLookupByLibrary.simpleMessage("Product Code"),
+        "product_description":
+            MessageLookupByLibrary.simpleMessage("Product Description"),
+        "product_name": MessageLookupByLibrary.simpleMessage("Product Name"),
+        "product_price": MessageLookupByLibrary.simpleMessage("Product Price"),
+        "select_image_error":
+            MessageLookupByLibrary.simpleMessage("Please select an image"),
         "sign_in_successfully":
             MessageLookupByLibrary.simpleMessage("Sign in successfully"),
         "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
@@ -96,6 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "to": MessageLookupByLibrary.simpleMessage("To"),
         "too_many_requests_message": MessageLookupByLibrary.simpleMessage(
             "Too many requests. Please try again later."),
+        "unit_amount": MessageLookupByLibrary.simpleMessage("Unit Amount"),
         "user_disabled_message": MessageLookupByLibrary.simpleMessage(
             "This user account has been disabled by an administrator."),
         "user_not_found_message": MessageLookupByLibrary.simpleMessage(
