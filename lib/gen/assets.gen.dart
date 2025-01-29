@@ -55,6 +55,16 @@ class $AssetsImagesGen {
   /// File path: assets/images/Check_icon.svg
   String get checkIcon => 'assets/images/Check_icon.svg';
 
+  /// File path: assets/images/background_image.svg
+  String get backgroundImage => 'assets/images/background_image.svg';
+
+  /// File path: assets/images/image.svg
+  String get image => 'assets/images/image.svg';
+
+  /// File path: assets/images/profile_image.png
+  AssetGenImage get profileImage =>
+      const AssetGenImage('assets/images/profile_image.png');
+
   /// File path: assets/images/splash.png
   AssetGenImage get splash => const AssetGenImage('assets/images/splash.png');
 
@@ -63,14 +73,26 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/splash_android12.png');
 
   /// List of all assets
-  List<dynamic> get values => [checkIcon, splash, splashAndroid12];
+  List<dynamic> get values => [
+        checkIcon,
+        backgroundImage,
+        image,
+        profileImage,
+        splash,
+        splashAndroid12
+      ];
 }
 
 class Assets {
   Assets._();
 
+  static const String aEnv = '.env';
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const String shorebird = 'shorebird.yaml';
+
+  /// List of all assets
+  static List<String> get values => [aEnv, shorebird];
 }
 
 class AssetGenImage {

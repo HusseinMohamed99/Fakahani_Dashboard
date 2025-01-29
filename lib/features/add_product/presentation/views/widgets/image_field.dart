@@ -42,7 +42,7 @@ class _ImageFieldState extends State<ImageField> {
         child: Stack(
           children: [
             Container(
-              width: context.width,
+              width: context.screenWidth,
               padding: EdgeInsets.symmetric(
                 horizontal: kPaddingContentHorizontal.w,
                 vertical: kPaddingContentVertical.h,

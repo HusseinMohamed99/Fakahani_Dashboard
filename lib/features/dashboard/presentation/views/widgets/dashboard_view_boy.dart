@@ -1,9 +1,13 @@
 import 'package:fakahani_dashboard/core/helpers/extensions/navigation_extension.dart';
+import 'package:fakahani_dashboard/core/helpers/extensions/responsive_size_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/widget_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
 import 'package:fakahani_dashboard/core/routing/routes.dart';
 import 'package:fakahani_dashboard/core/widgets/custom_button.dart';
+import 'package:fakahani_dashboard/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DashboardViewBoy extends StatelessWidget {
   const DashboardViewBoy({super.key});
@@ -11,18 +15,40 @@ class DashboardViewBoy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        SizedBox(
+          width: context.screenWidth,
+          height: context.screenHeight * 0.5,
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: SvgPicture.asset(
+                  Assets.images.backgroundImage,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                left: 29.w,
+                right: 29.w,
+                child: SvgPicture.asset(
+                  Assets.images.image,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const Spacer(),
         CustomButton(
-          text: 'Add Data',
+          text: 'Add Product',
           onPressed: () {
             context.pushNamed(Routes.addProductView);
           },
+        ).allPadding(
+          vPadding: kPaddingLargeHorizontal.h,
+          hPadding: kPaddingDefaultVertical.w,
         ),
       ],
-    ).allPadding(
-      vPadding: kPaddingDefaultVertical,
-      hPadding: kPaddingDefaultHorizontal,
     );
   }
 }
