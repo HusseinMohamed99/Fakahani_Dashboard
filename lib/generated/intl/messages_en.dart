@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "An account already exists with a different credential."),
         "add_product": MessageLookupByLibrary.simpleMessage("Add Product"),
         "app_title": MessageLookupByLibrary.simpleMessage("Fakahani"),
+        "back": MessageLookupByLibrary.simpleMessage("Back"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_already_exists":
             MessageLookupByLibrary.simpleMessage("Email already exists"),
@@ -62,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "network_request_failed_message": MessageLookupByLibrary.simpleMessage(
             "Please check your internet connection"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
         "number_of_calories":
             MessageLookupByLibrary.simpleMessage("Number of Calories"),
         "operation_not_allowed_message": MessageLookupByLibrary.simpleMessage(
@@ -107,6 +109,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_in_successfully":
             MessageLookupByLibrary.simpleMessage("Sign in successfully"),
         "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
+        "step_first": MessageLookupByLibrary.simpleMessage("Step 1"),
+        "step_second": MessageLookupByLibrary.simpleMessage("Step 2"),
+        "step_third": MessageLookupByLibrary.simpleMessage("Step 3"),
         "terms_of_conditions_error": MessageLookupByLibrary.simpleMessage(
             "You must agree to the terms of conditions."),
         "to": MessageLookupByLibrary.simpleMessage("To"),

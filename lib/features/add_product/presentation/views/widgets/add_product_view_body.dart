@@ -44,12 +44,12 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
   bool isOrganic = false;
   File? image;
 
-  _steps() => [
+  _steps(BuildContext context) => [
         Step(
           isActive: _currentStep == 0,
           state: _stepState(0),
           title: StepperSectionTitle(
-            title: 'First',
+            title: context.localization.step_first,
             isActive: _currentStep == 0,
           ),
           content: Form(
@@ -89,7 +89,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
           isActive: _currentStep == 1,
           state: _stepState(1),
           title: StepperSectionTitle(
-            title: 'First',
+            title: context.localization.step_second,
             isActive: _currentStep == 1,
           ),
           content: Form(
@@ -130,7 +130,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
           isActive: _currentStep == 2,
           state: _stepState(2),
           title: StepperSectionTitle(
-            title: 'First',
+            title: context.localization.step_third,
             isActive: _currentStep == 2,
           ),
           content: Form(
@@ -171,7 +171,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
       ];
   int _currentStep = 0;
   void _onStepContinue() {
-    if (_currentStep < _steps().length - 1) {
+    if (_currentStep < _steps(context).length - 1) {
       setState(() {
         _currentStep++;
       });
@@ -195,7 +195,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
   Widget controlsBuilder(
       BuildContext context, ControlsDetails controlsDetails) {
     return CustomButton(
-        text: 'Continue',
+        text: context.localization.next,
         onPressed: () {
           if (_currentStep == 0) {
             if (_formKeyFirst.currentState!.validate()) {
@@ -257,7 +257,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
       type: StepperType.horizontal,
       controlsBuilder: controlsBuilder,
       currentStep: _currentStep,
-      steps: _steps(),
+      steps: _steps(context),
       onStepContinue: _onStepContinue,
       onStepCancel: _onStepCancel,
       onStepTapped: _onStepTapped,

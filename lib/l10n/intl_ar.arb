@@ -119,5 +119,15 @@
       "product_added_successfully":"تمت إضافة المنتج بنجاح",
       "@product_added_successfully": {},
       "select_image_error":"الرجاء اختيار صورة",
-      "@select_image_error": {}
+      "@select_image_error": {},
+      "next":"التالى",
+      "@next": {},
+      "step_first":"الخطوة 1",
+      "@step_first": {},
+      "step_second":"الخطوة 2",
+      "@step_second": {},
+      "step_third":"الخطوة 3",
+      "@step_third": {},
+      "back":"السابق",
+      "@back": {}
 }

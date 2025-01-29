@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "يوجد حساب بالفعل ببيانات مختلفة."),
         "add_product": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
         "app_title": MessageLookupByLibrary.simpleMessage("فكهانى"),
+        "back": MessageLookupByLibrary.simpleMessage("السابق"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكترونى"),
         "email_already_exists": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني موجود بالفعل"),
@@ -62,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "network_request_failed_message": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ في الشبكة. يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى."),
+        "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "number_of_calories":
             MessageLookupByLibrary.simpleMessage("عدد السعرات الحرارية"),
         "operation_not_allowed_message": MessageLookupByLibrary.simpleMessage(
@@ -106,6 +108,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_in_successfully":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "start_now": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
+        "step_first": MessageLookupByLibrary.simpleMessage("الخطوة 1"),
+        "step_second": MessageLookupByLibrary.simpleMessage("الخطوة 2"),
+        "step_third": MessageLookupByLibrary.simpleMessage("الخطوة 3"),
         "terms_of_conditions_error": MessageLookupByLibrary.simpleMessage(
             "يجب عليك الموافقة على الشروط والأحكام."),
         "to": MessageLookupByLibrary.simpleMessage("في"),

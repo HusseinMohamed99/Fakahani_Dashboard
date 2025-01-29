@@ -119,5 +119,15 @@
       "product_added_successfully":"Product added successfully",
       "@product_added_successfully": {},
       "select_image_error":"Please select an image",
-      "@select_image_error": {}
+      "@select_image_error": {},
+      "next":"Next",
+      "@next": {},
+      "step_first":"Step 1",
+      "@step_first": {},
+      "step_second":"Step 2",
+      "@step_second": {},
+      "step_third":"Step 3",
+      "@step_third": {},
+      "back":"Back",
+      "@back": {}
 }

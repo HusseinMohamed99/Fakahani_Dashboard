@@ -18,6 +18,7 @@ ThemeData buildLightTheming() {
         systemNavigationBarColor: ColorManager.pureWhite,
       ),
     ),
+    // canvasColor: Colors.green.shade50,
     colorScheme: ColorScheme.fromSeed(
       seedColor: ColorManager.primaryGreen,
     ),
