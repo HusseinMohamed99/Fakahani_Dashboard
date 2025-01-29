@@ -11,7 +11,7 @@ abstract class AuthRepo {
   );
 
   Future insertUserData({required UserEntity user});
-  Future<UserEntity> getUserData({required String userID});
+  Future<UserEntity> getAdminData({required String userID});
 
   Future saveUserData({required UserEntity user});
 }

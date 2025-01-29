@@ -34,7 +34,7 @@ class AuthRepoImpl extends AuthRepo {
         password: password,
         authErrorMessages: authErrorMessages,
       );
-      var userEntity = await getUserData(userID: user.uid);
+      var userEntity = await getAdminData(userID: user.uid);
       await saveUserData(user: userEntity);
       return Right(
         userEntity,
@@ -56,7 +56,7 @@ class AuthRepoImpl extends AuthRepo {
       documentID: userEntity.uId,
     );
     if (isUserExists) {
-      await getUserData(userID: user.uid);
+      await getAdminData(userID: user.uid);
     } else {
       await insertUserData(user: userEntity);
     }
@@ -78,9 +78,9 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future<UserEntity> getUserData({required String userID}) async {
+  Future<UserEntity> getAdminData({required String userID}) async {
     var userData = await databaseServices.getData(
-      path: BackendEndPoint.getUserData,
+      path: BackendEndPoint.getAdminData,
       documentID: userID,
     );
     return UserModel.fromJson(userData);
