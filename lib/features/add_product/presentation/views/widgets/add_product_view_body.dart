@@ -4,6 +4,8 @@ import 'package:fakahani_dashboard/core/helpers/extensions/localization_extensio
 import 'package:fakahani_dashboard/core/helpers/extensions/snack_bar_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/widget_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
+import 'package:fakahani_dashboard/core/theming/color_manager/color_manager.dart';
+import 'package:fakahani_dashboard/core/theming/style_manager/text_style.dart';
 import 'package:fakahani_dashboard/core/widgets/custom_button.dart';
 import 'package:fakahani_dashboard/core/widgets/custom_text_form_field.dart';
 import 'package:fakahani_dashboard/features/add_product/domain/entities/add_product_input_entity.dart';
@@ -46,7 +48,10 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
         Step(
           isActive: _currentStep == 0,
           state: _stepState(0),
-          title: const Text('First'),
+          title: StepperSectionTitle(
+            title: 'First',
+            isActive: _currentStep == 0,
+          ),
           content: Form(
             key: _formKeyFirst,
             autovalidateMode: _autovalidateMode,
@@ -83,7 +88,10 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
         Step(
           isActive: _currentStep == 1,
           state: _stepState(1),
-          title: const Text('Second'),
+          title: StepperSectionTitle(
+            title: 'First',
+            isActive: _currentStep == 1,
+          ),
           content: Form(
             key: _formKeySecond,
             autovalidateMode: _autovalidateMode,
@@ -121,7 +129,10 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
         Step(
           isActive: _currentStep == 2,
           state: _stepState(2),
-          title: const Text('Third'),
+          title: StepperSectionTitle(
+            title: 'First',
+            isActive: _currentStep == 2,
+          ),
           content: Form(
             key: _formKeyThird,
             autovalidateMode: _autovalidateMode,
@@ -256,6 +267,26 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
   void showError(BuildContext context) {
     context.showSnackBar(
       context.localization.select_image_error,
+    );
+  }
+}
+
+class StepperSectionTitle extends StatelessWidget {
+  const StepperSectionTitle({
+    super.key,
+    required this.title,
+    required this.isActive,
+  });
+  final String title;
+  final bool isActive;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      title,
+      style: isActive
+          ? TextStyleManager.bold13(context: context)
+              .copyWith(color: ColorManager.primaryGreen)
+          : TextStyleManager.bold13(context: context),
     );
   }
 }
