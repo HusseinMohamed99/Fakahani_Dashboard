@@ -1,5 +1,7 @@
 import 'package:fakahani_dashboard/core/helpers/extensions/responsive_size_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/widget_extension.dart';
+import 'package:fakahani_dashboard/core/helpers/functions/get_user.dart';
+import 'package:fakahani_dashboard/core/helpers/responsive/spacing.dart';
 import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
 import 'package:fakahani_dashboard/core/theming/color_manager/color_manager.dart';
 import 'package:fakahani_dashboard/core/theming/style_manager/text_style.dart';
@@ -13,10 +15,66 @@ class SettingsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: AvatarImageWidget(),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const AvatarImageWidget().onlyPadding(
+          bottomPadding: kPaddingDefaultVertical.h,
+        ),
+        Text(
+          'General',
+          style: TextStyleManager.semiBold13(context: context),
+        ).onlyPadding(
+          bottomPadding: kPaddingDefaultVertical.h,
+        ),
+        Expanded(
+          child: CustomScrollView(
+            slivers: [
+              const GeneralSettingListView(),
+              SliverToBoxAdapter(
+                child: Text(
+                  'Security',
+                  style: TextStyleManager.semiBold13(context: context),
+                ).vPadding(
+                  kPaddingDefaultVertical.h,
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Card(
+                  margin: EdgeInsets.zero,
+                  elevation: 2,
+                  shape: const RoundedRectangleBorder(),
+                  child: ListTile(
+                    leading: SvgPicture.asset(Assets.images.infoCircle),
+                    title: Text(
+                      'About Us',
+                      style: TextStyleManager.semiBold13(context: context),
+                    ),
+                    trailing: const Icon(Icons.arrow_forward_ios),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        IntrinsicWidth(
+          stepWidth: context.screenWidth,
+          child: Card(
+            margin: EdgeInsets.zero,
+            elevation: 2,
+            shape: const RoundedRectangleBorder(),
+            child: ListTile(
+              leading: SvgPicture.asset(Assets.images.logout),
+              title: Text(
+                'Change Password',
+                style: TextStyleManager.semiBold13(context: context),
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios),
+            ),
+          ).onlyPadding(
+            topPadding: kMaxSpacing.h,
+            bottomPadding: kSpacingXLarge.h,
+          ),
         ),
       ],
     ).allPadding(
@@ -77,25 +135,116 @@ class AvatarImageWidget extends StatelessWidget {
               ),
             ],
           ),
-          Column(
-            spacing: kSpacingSmaller.h,
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'أحمد ياسر',
-                style: TextStyleManager.bold13(context: context).copyWith(
-                  color: ColorManager.darkBlack,
+          Expanded(
+            child: Column(
+              spacing: kSpacingSmaller.h,
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  getUser().name,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyleManager.bold13(context: context).copyWith(
+                    color: ColorManager.darkBlack,
+                  ),
                 ),
-              ),
-              Text(
-                'mail@mail.com',
-                style: TextStyleManager.regular13(context: context),
-              ),
-            ],
+                Text(
+                  getUser().email,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyleManager.regular13(context: context),
+                ),
+              ],
+            ),
           ),
         ],
       ),
     );
   }
 }
+
+class GeneralSettingsWidget extends StatelessWidget {
+  const GeneralSettingsWidget(
+      {super.key,
+      required this.title,
+      required this.leadingIcon,
+      this.trailing});
+  final String title, leadingIcon;
+  final Widget? trailing;
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.zero,
+      elevation: 2,
+      shape: const RoundedRectangleBorder(),
+      child: ListTile(
+        leading: SvgPicture.asset(leadingIcon),
+        title: Text(
+          title,
+          style: TextStyleManager.semiBold13(context: context),
+        ),
+        trailing: trailing ?? const Icon(Icons.arrow_forward_ios),
+      ),
+    ).onlyPadding(
+      bottomPadding: kPaddingSmallVertical.h,
+    );
+  }
+}
+
+class GeneralSettingListView extends StatelessWidget {
+  const GeneralSettingListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverList.builder(
+      itemCount: 7,
+      itemBuilder: (context, index) {
+        return generalSettingsList(context)[index];
+      },
+    );
+  }
+}
+
+List<Widget> generalSettingsList(BuildContext context) => [
+      GeneralSettingsWidget(
+          title: 'Personal Profile', leadingIcon: Assets.images.user),
+      GeneralSettingsWidget(title: 'My Order', leadingIcon: Assets.images.box),
+      GeneralSettingsWidget(
+          title: 'Payments', leadingIcon: Assets.images.emptyWallet),
+      GeneralSettingsWidget(
+          title: 'Favorites', leadingIcon: Assets.images.heart),
+      GeneralSettingsWidget(
+        title: 'Notifications',
+        leadingIcon: Assets.images.notification,
+        trailing: Switch(
+          value: true,
+          onChanged: (value) {},
+        ),
+      ),
+      GeneralSettingsWidget(
+        title: 'Language',
+        leadingIcon: Assets.images.global,
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'English',
+              style: TextStyleManager.regular13(context: context).copyWith(
+                color: ColorManager.darkBlack,
+              ),
+            ),
+            horizontalSpacing(kSpacingSmaller.w),
+            const Icon(Icons.arrow_forward_ios),
+          ],
+        ),
+      ),
+      GeneralSettingsWidget(
+        title: 'Theme Mode',
+        leadingIcon: Assets.images.magicpen,
+        trailing: Switch(
+          value: false,
+          onChanged: (value) {},
+        ),
+      ),
+    ];

@@ -65,8 +65,32 @@ class $AssetsImagesGen {
   /// File path: assets/images/background_image.svg
   String get backgroundImage => 'assets/images/background_image.svg';
 
+  /// File path: assets/images/box.svg
+  String get box => 'assets/images/box.svg';
+
+  /// File path: assets/images/empty-wallet.svg
+  String get emptyWallet => 'assets/images/empty-wallet.svg';
+
+  /// File path: assets/images/global.svg
+  String get global => 'assets/images/global.svg';
+
+  /// File path: assets/images/heart.svg
+  String get heart => 'assets/images/heart.svg';
+
   /// File path: assets/images/image.svg
   String get image => 'assets/images/image.svg';
+
+  /// File path: assets/images/info-circle.svg
+  String get infoCircle => 'assets/images/info-circle.svg';
+
+  /// File path: assets/images/logout.svg
+  String get logout => 'assets/images/logout.svg';
+
+  /// File path: assets/images/magicpen.svg
+  String get magicpen => 'assets/images/magicpen.svg';
+
+  /// File path: assets/images/notification.svg
+  String get notification => 'assets/images/notification.svg';
 
   /// File path: assets/images/profile_image.png
   AssetGenImage get profileImage =>
@@ -79,16 +103,28 @@ class $AssetsImagesGen {
   AssetGenImage get splashAndroid12 =>
       const AssetGenImage('assets/images/splash_android12.png');
 
+  /// File path: assets/images/user.svg
+  String get user => 'assets/images/user.svg';
+
   /// List of all assets
   List<dynamic> get values => [
         camera,
         checkIcon,
         imageProfileTest,
         backgroundImage,
+        box,
+        emptyWallet,
+        global,
+        heart,
         image,
+        infoCircle,
+        logout,
+        magicpen,
+        notification,
         profileImage,
         splash,
-        splashAndroid12
+        splashAndroid12,
+        user
       ];
 }
 

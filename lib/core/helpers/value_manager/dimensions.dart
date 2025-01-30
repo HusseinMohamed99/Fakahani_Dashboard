@@ -40,6 +40,7 @@ const double kBorderRadiusMedium = 8.0;
 const double kBorderRadiusRounded = 4.0;
 
 // Spacing Values
+const double kMaxSpacing = 63.0;
 const double kSpacingXLarge = 24.0;
 const double kSpacingLarge = 20.0;
 const double kSpacingDefault = 16.0;
