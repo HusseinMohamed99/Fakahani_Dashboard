@@ -8,7 +8,14 @@ import 'package:fakahani_dashboard/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-List<Widget> generalSettingsList(BuildContext context) => [
+List<Widget> generalSettingsList(
+  BuildContext context,
+  bool isNotificationsEnabled,
+  bool isDarkModeEnabled,
+  ValueChanged<bool> onChangedTheme,
+  ValueChanged<bool> onChangedNotifications,
+) =>
+    [
       GeneralSettingsWidget(
           title: context.localization.personal_profile,
           leadingIcon: Assets.images.user),
@@ -25,8 +32,11 @@ List<Widget> generalSettingsList(BuildContext context) => [
         title: context.localization.notifications,
         leadingIcon: Assets.images.notification,
         trailing: Switch(
-          value: true,
-          onChanged: (value) {},
+          value: isNotificationsEnabled,
+          onChanged: (value) {
+            isNotificationsEnabled = value;
+            onChangedNotifications(value);
+          },
         ),
       ),
       GeneralSettingsWidget(
@@ -50,8 +60,11 @@ List<Widget> generalSettingsList(BuildContext context) => [
         title: context.localization.theme_mode,
         leadingIcon: Assets.images.magicpen,
         trailing: Switch(
-          value: false,
-          onChanged: (value) {},
+          value: isDarkModeEnabled,
+          onChanged: (value) {
+            isDarkModeEnabled = value;
+            onChangedTheme(value);
+          },
         ),
       ),
     ];
