@@ -1,4 +1,4 @@
-import 'package:fakahani_dashboard/features/settings/presentation/views/widgets/general_sttings_list.dart';
+import 'package:fakahani_dashboard/features/settings/presentation/views/widgets/general_settings_list.dart';
 import 'package:flutter/material.dart';
 
 class GeneralSettingListView extends StatelessWidget {
