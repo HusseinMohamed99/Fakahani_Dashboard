@@ -103,6 +103,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("وصف المنتج"),
         "product_name": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
         "product_price": MessageLookupByLibrary.simpleMessage("سعر المنتج"),
+        "required_field":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "select_image_error":
             MessageLookupByLibrary.simpleMessage("الرجاء اختيار صورة"),
         "sign_in_successfully":

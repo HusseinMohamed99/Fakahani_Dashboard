@@ -129,5 +129,7 @@
       "step_third":"Step 3",
       "@step_third": {},
       "back":"Back",
-      "@back": {}
+      "@back": {},
+      "required_field":"This field is required",
+      "@required_field": {}
 }

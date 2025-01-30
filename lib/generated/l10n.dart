@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-import 'package:fakahani_dashboard/generated/intl/messages_all.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'intl/messages_all.dart';
 
 // **************************************************************************
 // Generator: Flutter Intl IDE plugin
@@ -695,6 +695,16 @@ class S {
     return Intl.message(
       'Back',
       name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This field is required`
+  String get required_field {
+    return Intl.message(
+      'This field is required',
+      name: 'required_field',
       desc: '',
       args: [],
     );

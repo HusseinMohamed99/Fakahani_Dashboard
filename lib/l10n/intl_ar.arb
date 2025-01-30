@@ -129,5 +129,7 @@
       "step_third":"الخطوة 3",
       "@step_third": {},
       "back":"السابق",
-      "@back": {}
+      "@back": {},
+      "required_field":"هذا الحقل مطلوب",
+      "@required_field": {}
 }

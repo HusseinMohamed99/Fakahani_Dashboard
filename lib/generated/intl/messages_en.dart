@@ -104,6 +104,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Product Description"),
         "product_name": MessageLookupByLibrary.simpleMessage("Product Name"),
         "product_price": MessageLookupByLibrary.simpleMessage("Product Price"),
+        "required_field":
+            MessageLookupByLibrary.simpleMessage("This field is required"),
         "select_image_error":
             MessageLookupByLibrary.simpleMessage("Please select an image"),
         "sign_in_successfully":

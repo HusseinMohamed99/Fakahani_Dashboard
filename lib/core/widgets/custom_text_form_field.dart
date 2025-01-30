@@ -1,3 +1,4 @@
+import 'package:fakahani_dashboard/core/helpers/extensions/localization_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
 import 'package:fakahani_dashboard/core/theming/color_manager/color_manager.dart';
 import 'package:fakahani_dashboard/core/theming/style_manager/text_style.dart';
@@ -42,7 +43,7 @@ class CustomTextFormField extends StatelessWidget {
       validator: validator ??
           (value) {
             if (value == null || value.trim().isEmpty) {
-              return 'This field is required';
+              return context.localization.required_field;
             }
 
             return null;
