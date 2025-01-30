@@ -2,7 +2,6 @@ import 'package:fakahani_dashboard/core/helpers/extensions/localization_extensio
 import 'package:fakahani_dashboard/core/helpers/extensions/navigation_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/responsive_size_extension.dart';
 import 'package:fakahani_dashboard/core/helpers/extensions/widget_extension.dart';
-import 'package:fakahani_dashboard/core/helpers/functions/app_logs.dart';
 import 'package:fakahani_dashboard/core/helpers/value_manager/dimensions.dart';
 import 'package:fakahani_dashboard/core/routing/routes.dart';
 import 'package:fakahani_dashboard/core/theming/color_manager/color_manager.dart';
@@ -51,8 +50,7 @@ class DashboardViewBoy extends StatelessWidget {
                       size: 24.sp,
                     ),
                     onPressed: () {
-                      //  context.pushNamed(Routes.profileView);
-                      AppLogs.infoLog('Settings');
+                      context.pushNamed(Routes.settingsView);
                     },
                   ),
                 ),
