@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 AppBar buildAppBar(BuildContext context,
     {VoidCallback? onBackPress, required String title}) {
   return AppBar(
-    backgroundColor: ColorManager.pureWhite,
+    backgroundColor: ColorManager.stepperColorBackground,
     elevation: 0,
     centerTitle: true,
     leading: GestureDetector(

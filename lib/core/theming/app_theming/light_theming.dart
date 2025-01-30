@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 
 ThemeData buildLightTheming() {
   return ThemeData(
+    useMaterial3: true, // Might modify colors
     fontFamily: FontFamilyHelper.standardFont,
     scaffoldBackgroundColor: ColorManager.pureWhite,
     appBarTheme: const AppBarTheme(
@@ -18,7 +19,7 @@ ThemeData buildLightTheming() {
         systemNavigationBarColor: ColorManager.pureWhite,
       ),
     ),
-    // canvasColor: Colors.green.shade50,
+    canvasColor: ColorManager.stepperColorBackground,
     colorScheme: ColorScheme.fromSeed(
       seedColor: ColorManager.primaryGreen,
     ),

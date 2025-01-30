@@ -22,4 +22,5 @@ class ColorManager {
   static const Color brightRed = Color(0xFFF30202); // Formerly red
   static const Color errorRed = Color(0xFFB00020); // Red color for error text
   static const Color notificationShape = Color(0xFFEEF8ED);
+  static const Color stepperColorBackground = Color(0xFFf6fbf3);
 }
