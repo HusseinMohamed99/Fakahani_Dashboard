@@ -64,12 +64,14 @@ class SettingsViewBody extends StatelessWidget {
             elevation: 2,
             shape: const RoundedRectangleBorder(),
             child: ListTile(
-              leading: SvgPicture.asset(Assets.images.logout),
-              title: Text(
-                'Change Password',
-                style: TextStyleManager.semiBold13(context: context),
+              title: Center(
+                child: Text(
+                  'Logout',
+                  style: TextStyleManager.semiBold13(context: context),
+                ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios),
+              trailing: SvgPicture.asset(Assets.images.logout)
+                  .onlyPadding(leftPadding: kSpacingDefault.w),
             ),
           ).onlyPadding(
             topPadding: kMaxSpacing.h,
