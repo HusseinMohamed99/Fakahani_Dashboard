@@ -19,7 +19,11 @@ class GeneralSettingsWidget extends StatelessWidget {
     return Card(
       margin: EdgeInsets.zero,
       elevation: 2,
-      shape: const RoundedRectangleBorder(),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(
+          kBorderRadiusDefault,
+        ),
+      ),
       child: ListTile(
         leading: SvgPicture.asset(leadingIcon),
         title: Text(

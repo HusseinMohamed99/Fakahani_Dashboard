@@ -43,7 +43,11 @@ class SettingsViewBody extends StatelessWidget {
                       child: Card(
                         margin: EdgeInsets.zero,
                         elevation: 2,
-                        shape: const RoundedRectangleBorder(),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            kBorderRadiusDefault,
+                          ),
+                        ),
                         child: ListTile(
                           leading: SvgPicture.asset(Assets.images.infoCircle),
                           title: Text(
