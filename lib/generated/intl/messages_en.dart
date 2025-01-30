@@ -22,12 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "about_us": MessageLookupByLibrary.simpleMessage("About Us"),
         "account_created_successfully": MessageLookupByLibrary.simpleMessage(
             "Account created successfully"),
         "account_exists_message": MessageLookupByLibrary.simpleMessage(
             "An account already exists with a different credential."),
         "add_product": MessageLookupByLibrary.simpleMessage("Add Product"),
         "app_title": MessageLookupByLibrary.simpleMessage("Fakahani"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_already_exists":
@@ -40,8 +42,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Email or password is incorrect"),
         "email_valid": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid email address"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "expiry_month": MessageLookupByLibrary.simpleMessage("Expiry Month"),
         "faka": MessageLookupByLibrary.simpleMessage("Faka"),
+        "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "full_name_empty":
@@ -50,9 +54,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Full name must be at most 20 characters"),
         "full_name_minimum_length": MessageLookupByLibrary.simpleMessage(
             "Full name must be at least 3 characters"),
+        "general": MessageLookupByLibrary.simpleMessage("General"),
         "general_error": MessageLookupByLibrary.simpleMessage(
             "An error occurred, please try again later."),
         "hani": MessageLookupByLibrary.simpleMessage("Hani"),
+        "help": MessageLookupByLibrary.simpleMessage("Help"),
         "internal_error_message": MessageLookupByLibrary.simpleMessage(
             "An internal error occurred. Please try again later."),
         "invalid_email_message": MessageLookupByLibrary.simpleMessage(
@@ -60,10 +66,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "is_featured_item":
             MessageLookupByLibrary.simpleMessage("Is Featured Item ?"),
         "is_organic": MessageLookupByLibrary.simpleMessage("Is Organic ?"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "my_orders": MessageLookupByLibrary.simpleMessage("My Orders"),
         "network_request_failed_message": MessageLookupByLibrary.simpleMessage(
             "Please check your internet connection"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "number_of_calories":
             MessageLookupByLibrary.simpleMessage("Number of Calories"),
         "operation_not_allowed_message": MessageLookupByLibrary.simpleMessage(
@@ -90,6 +100,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Password must contain at least one special character"),
         "password_missing_uppercase": MessageLookupByLibrary.simpleMessage(
             "Password must contain at least one uppercase letter"),
+        "payments": MessageLookupByLibrary.simpleMessage("Payments"),
+        "personal_profile":
+            MessageLookupByLibrary.simpleMessage("Personal Profile"),
         "phone_already_exists":
             MessageLookupByLibrary.simpleMessage("Phone number already exists"),
         "phone_empty": MessageLookupByLibrary.simpleMessage(
@@ -108,6 +121,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "select_image_error":
             MessageLookupByLibrary.simpleMessage("Please select an image"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "sign_in_successfully":
             MessageLookupByLibrary.simpleMessage("Sign in successfully"),
         "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
@@ -116,6 +130,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "step_third": MessageLookupByLibrary.simpleMessage("Step 3"),
         "terms_of_conditions_error": MessageLookupByLibrary.simpleMessage(
             "You must agree to the terms of conditions."),
+        "theme_mode": MessageLookupByLibrary.simpleMessage("Theme Mode"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
         "too_many_requests_message": MessageLookupByLibrary.simpleMessage(
             "Too many requests. Please try again later."),

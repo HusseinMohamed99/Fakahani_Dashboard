@@ -22,12 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "about_us": MessageLookupByLibrary.simpleMessage("من نحن"),
         "account_created_successfully":
             MessageLookupByLibrary.simpleMessage("تم إنشاء الحساب بنجاح"),
         "account_exists_message": MessageLookupByLibrary.simpleMessage(
             "يوجد حساب بالفعل ببيانات مختلفة."),
         "add_product": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
         "app_title": MessageLookupByLibrary.simpleMessage("فكهانى"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "back": MessageLookupByLibrary.simpleMessage("السابق"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكترونى"),
         "email_already_exists": MessageLookupByLibrary.simpleMessage(
@@ -40,8 +42,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
         "email_valid": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال عنوان بريد إلكتروني صالح"),
+        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "expiry_month": MessageLookupByLibrary.simpleMessage("شهر الانتهاء"),
         "faka": MessageLookupByLibrary.simpleMessage("فكـ"),
+        "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "full_name_empty": MessageLookupByLibrary.simpleMessage(
@@ -50,9 +54,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "يجب أن يحتوي الاسم الكامل على 20 حرفًا كحد أقصى"),
         "full_name_minimum_length": MessageLookupByLibrary.simpleMessage(
             "يجب أن يحتوي الاسم الكامل على 3 أحرف على الأقل"),
+        "general": MessageLookupByLibrary.simpleMessage("عام"),
         "general_error": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ غير معروف. يرجى المحاولة لاحقًا."),
         "hani": MessageLookupByLibrary.simpleMessage("هانى"),
+        "help": MessageLookupByLibrary.simpleMessage("المساعدة"),
         "internal_error_message": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ داخلي. يرجى المحاولة مرة أخرى لاحقًا."),
         "invalid_email_message": MessageLookupByLibrary.simpleMessage(
@@ -60,10 +66,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "is_featured_item":
             MessageLookupByLibrary.simpleMessage("هل هو منتج مميز؟"),
         "is_organic": MessageLookupByLibrary.simpleMessage("هل هو منتج عضوى؟"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "my_orders": MessageLookupByLibrary.simpleMessage("طلباتي"),
         "network_request_failed_message": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ في الشبكة. يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى."),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
+        "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "number_of_calories":
             MessageLookupByLibrary.simpleMessage("عدد السعرات الحرارية"),
         "operation_not_allowed_message": MessageLookupByLibrary.simpleMessage(
@@ -90,6 +100,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "كلمة المرور يجب أن تحتوي على رمز خاص"),
         "password_missing_uppercase": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور يجب أن تحتوي على حروف كبيرة"),
+        "payments": MessageLookupByLibrary.simpleMessage("المدفوعات"),
+        "personal_profile":
+            MessageLookupByLibrary.simpleMessage("الملف الشخصى"),
         "phone_already_exists":
             MessageLookupByLibrary.simpleMessage("رقم الهاتف موجود بالفعل"),
         "phone_empty": MessageLookupByLibrary.simpleMessage(
@@ -107,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "select_image_error":
             MessageLookupByLibrary.simpleMessage("الرجاء اختيار صورة"),
+        "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "sign_in_successfully":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "start_now": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
@@ -115,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "step_third": MessageLookupByLibrary.simpleMessage("الخطوة 3"),
         "terms_of_conditions_error": MessageLookupByLibrary.simpleMessage(
             "يجب عليك الموافقة على الشروط والأحكام."),
+        "theme_mode": MessageLookupByLibrary.simpleMessage("الوضع"),
         "to": MessageLookupByLibrary.simpleMessage("في"),
         "too_many_requests_message": MessageLookupByLibrary.simpleMessage(
             "تم إرسال العديد من الطلبات. يرجى المحاولة لاحقًا."),
