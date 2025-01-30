@@ -13,9 +13,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouters {
   Route? generateRoute(RouteSettings settings) {
-// This arguments to be passed in any screen like this (arguments as ClassName)
-    final arguments = settings.arguments;
-
     switch (settings.name) {
       case Routes.loginView:
         return MaterialPageRoute(

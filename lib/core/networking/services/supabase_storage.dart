@@ -25,8 +25,8 @@ class SupabaseStorageService implements StorageService {
 
   static initSupabase() async {
     _supabase = await Supabase.initialize(
-      url: kSupabaseUrl!,
-      anonKey: kSupabaseApiKey!,
+      url: kSupabaseUrl,
+      anonKey: kSupabaseApiKey,
     );
   }
 

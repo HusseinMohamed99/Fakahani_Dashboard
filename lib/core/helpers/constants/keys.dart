@@ -9,9 +9,11 @@ class SharedPrefKeys {
 bool isLoggedInUser = false;
 bool isOnBoardingView = false;
 
-final String? kSupabaseApiKey = dotenv.env['kSupabaseApiKey'];
+String kSupabaseApiKey =
+    dotenv.env['kSupabaseApiKey'] ?? (throw Exception('API_KEY is missing'));
 
-final String? kSupabaseUrl = dotenv.env['kSupabaseUrl'];
+String kSupabaseUrl =
+    dotenv.env['kSupabaseUrl'] ?? (throw Exception('Base_URL is missing'));
 
 class Buckets {
   static const String fruitsImage = 'fruits_images';
