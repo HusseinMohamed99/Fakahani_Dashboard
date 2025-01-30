@@ -52,8 +52,15 @@ class $AssetsFontsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/Camera.svg
+  String get camera => 'assets/images/Camera.svg';
+
   /// File path: assets/images/Check_icon.svg
   String get checkIcon => 'assets/images/Check_icon.svg';
+
+  /// File path: assets/images/ImageProfileTest.png
+  AssetGenImage get imageProfileTest =>
+      const AssetGenImage('assets/images/ImageProfileTest.png');
 
   /// File path: assets/images/background_image.svg
   String get backgroundImage => 'assets/images/background_image.svg';
@@ -74,7 +81,9 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<dynamic> get values => [
+        camera,
         checkIcon,
+        imageProfileTest,
         backgroundImage,
         image,
         profileImage,
