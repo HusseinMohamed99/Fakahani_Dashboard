@@ -32,6 +32,21 @@ List<Widget> generalSettingsList(
         title: context.localization.notifications,
         leadingIcon: Assets.images.notification,
         trailing: Switch(
+          inactiveTrackColor: ColorManager.grey,
+          thumbIcon: WidgetStateProperty.resolveWith<Icon?>((states) {
+            if (states.contains(WidgetState.selected)) {
+              return const Icon(
+                Icons.check_circle,
+                size: 28,
+                color: Colors.white,
+              ); // Active icon
+            }
+            return const Icon(
+              Icons.circle,
+              size: 26,
+              color: Colors.white,
+            ); // Inactive icon
+          }),
           value: isNotificationsEnabled,
           onChanged: (value) {
             isNotificationsEnabled = value;
@@ -60,6 +75,21 @@ List<Widget> generalSettingsList(
         title: context.localization.theme_mode,
         leadingIcon: Assets.images.magicpen,
         trailing: Switch(
+          inactiveTrackColor: ColorManager.grey,
+          thumbIcon: WidgetStateProperty.resolveWith<Icon?>((states) {
+            if (states.contains(WidgetState.selected)) {
+              return const Icon(
+                Icons.check_circle,
+                size: 28,
+                color: Colors.white,
+              ); // Active icon
+            }
+            return const Icon(
+              Icons.circle,
+              size: 26,
+              color: Colors.white,
+            ); // Inactive icon
+          }),
           value: isDarkModeEnabled,
           onChanged: (value) {
             isDarkModeEnabled = value;

@@ -19,6 +19,7 @@ class ColorManager {
   static const Color mediumGrey = Color(0xFF949D9E); // Formerly lightGrey
   static const Color lightGrey = Color(0xFFC9CECF); // Formerly lighterGrey
   static const Color lighterGrey = Color(0xFFDCDEDE); // Very light grey
+  static const Color grey = Color(0xFF888FA0); // Very light grey
   static const Color brightRed = Color(0xFFF30202); // Formerly red
   static const Color errorRed = Color(0xFFB00020); // Red color for error text
   static const Color notificationShape = Color(0xFFEEF8ED);
