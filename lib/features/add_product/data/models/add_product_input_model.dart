@@ -39,6 +39,7 @@ class AddProductInputModel {
     this.avgRating = 0,
     this.ratingCount = 0,
     required this.reviews,
+    this.sellingCount = 0,
   });
 
   final String name;
@@ -55,6 +56,8 @@ class AddProductInputModel {
   final num avgRating;
   final int ratingCount;
   final List<ReviewModel> reviews;
+  final int sellingCount;
+
   toJson() => {
         'name': name,
         'code': code,
@@ -69,5 +72,6 @@ class AddProductInputModel {
         'avgRating': avgRating,
         'ratingCount': ratingCount,
         'reviews': reviews.map((e) => e.toJson()).toList(),
+        'sellingCount': sellingCount,
       };
 }
