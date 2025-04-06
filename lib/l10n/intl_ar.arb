@@ -158,6 +158,8 @@
       "@english": {},
       "arabic":"العربية",
       "@arabic": {},
+      "view_orders":"عرض الطلبات",
+      "@view_orders": {},
       "theme_mode":"الوضع",
       "@theme_mode": {}
 }

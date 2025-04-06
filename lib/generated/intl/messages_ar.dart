@@ -173,6 +173,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "user_not_found_message": MessageLookupByLibrary.simpleMessage(
       "لم يتم العثور على حساب باستخدام هذا البريد الإلكتروني.",
     ),
+    "view_orders": MessageLookupByLibrary.simpleMessage("عرض الطلبات"),
     "welcome": MessageLookupByLibrary.simpleMessage("مرحبًا بك "),
     "welcome_subtitle_first": MessageLookupByLibrary.simpleMessage(
       "يسعدنا أن نرى ما ستضيفه! املأ التفاصيل أدناه، ولا تنس تحميل بعض الصور الرائعة.",

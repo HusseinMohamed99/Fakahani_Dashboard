@@ -60,15 +60,26 @@ class DashboardViewBoy extends StatelessWidget {
         ),
         const WelcomeText(),
         const Spacer(),
-        CustomButton(
-          text: context.localization.start_now,
-          onPressed: () {
-            context.pushNamed(Routes.addProductView);
-          },
+        Column(
+          spacing: kPaddingDefaultVertical.h,
+          children: [
+            CustomButton(
+              text: context.localization.start_now,
+              onPressed: () {
+                context.pushNamed(Routes.addProductView);
+              },
+            ),CustomButton(
+              text: context.localization.view_orders,
+              onPressed: () {
+                context.pushNamed(Routes.ordersView);
+              },
+            ),
+            
+          ],
         ).allPadding(
-          vPadding: kPaddingLargeHorizontal.h,
-          hPadding: kPaddingDefaultVertical.w,
-        ),
+              vPadding: kPaddingLargeHorizontal.h,
+              hPadding: kPaddingDefaultVertical.w,
+            ),
       ],
     );
   }

@@ -8,6 +8,7 @@ import 'package:fakahani_dashboard/features/auth/domain/repo/auth_repo.dart';
 import 'package:fakahani_dashboard/features/auth/presentation/logic/signin_cubit/signin_cubit.dart';
 import 'package:fakahani_dashboard/features/auth/presentation/signin/signin_view.dart';
 import 'package:fakahani_dashboard/features/dashboard/presentation/views/dashboard_view.dart';
+import 'package:fakahani_dashboard/features/orders/presentation/views/orders_view.dart';
 import 'package:fakahani_dashboard/features/settings/presentation/views/settings_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -42,6 +43,8 @@ class AppRouters {
         return MaterialPageRoute(
           builder: (_) => const SettingsView(),
         );
+      case Routes.ordersView:
+        return MaterialPageRoute(builder: (context) => const OrdersView());
     }
 
     return null;

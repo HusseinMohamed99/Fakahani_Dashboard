@@ -10,6 +10,8 @@ import 'package:fakahani_dashboard/core/repos/product_repo/product_repo.dart';
 import 'package:fakahani_dashboard/core/repos/product_repo/product_repo_impl.dart';
 import 'package:fakahani_dashboard/features/auth/data/repos/auth_repo_impl.dart';
 import 'package:fakahani_dashboard/features/auth/domain/repo/auth_repo.dart';
+import 'package:fakahani_dashboard/features/orders/data/repos/orders_repo_impl.dart';
+import 'package:fakahani_dashboard/features/orders/domain/entities/repos/orders_repo.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
@@ -30,4 +32,7 @@ Future<void> setupGetIt() async {
       ImagesRepoImpl(getIt.get<StorageService>()));
   getIt.registerSingleton<ProductRepo>(
       ProductRepoImpl(databaseServices: getIt.get<DatabaseServices>()));
+        getIt.registerSingleton<OrdersRepo>(
+      OrdersRepoImpl(getIt.get<DatabaseServices>()));
+
 }

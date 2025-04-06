@@ -3,4 +3,5 @@ class Routes {
   static const dashboardView = '/DashboardView';
   static const addProductView = '/AddProductView';
   static const settingsView = '/SettingsView';
+  static const ordersView = '/ordersView';
 }

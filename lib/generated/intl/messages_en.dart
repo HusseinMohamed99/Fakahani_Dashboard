@@ -174,6 +174,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "user_not_found_message": MessageLookupByLibrary.simpleMessage(
       "No user found with this email.",
     ),
+    "view_orders": MessageLookupByLibrary.simpleMessage("View Orders"),
     "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
     "welcome_subtitle_first": MessageLookupByLibrary.simpleMessage(
       "We’re excited to see what you’re adding! Fill in the details below, and don’t forget to upload some great images",

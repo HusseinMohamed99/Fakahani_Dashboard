@@ -700,6 +700,11 @@ class S {
     return Intl.message('Arabic', name: 'arabic', desc: '', args: []);
   }
 
+  /// `View Orders`
+  String get view_orders {
+    return Intl.message('View Orders', name: 'view_orders', desc: '', args: []);
+  }
+
   /// `Theme Mode`
   String get theme_mode {
     return Intl.message('Theme Mode', name: 'theme_mode', desc: '', args: []);
