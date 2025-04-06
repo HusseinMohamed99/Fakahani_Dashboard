@@ -18,7 +18,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddProductViewBody extends StatefulWidget {
   const AddProductViewBody({super.key});
-
   @override
   State<AddProductViewBody> createState() => _AddProductViewBodyState();
 }
@@ -37,13 +36,11 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
   final TextEditingController numberOfCaloriesController =
       TextEditingController();
   final TextEditingController uintAmountController = TextEditingController();
-
   late String name, code, description;
   late num price, expiryMonth, numberOfCalories, uintAmount;
   bool isFeatured = false;
   bool isOrganic = false;
   File? image;
-
   _steps(BuildContext context) => [
         Step(
           isActive: _currentStep == 0,
@@ -207,16 +204,8 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
               _formKeySecond.currentState!.save();
               _onStepContinue();
             }
-          } else if (_currentStep == 2) {
-            if (image != null) {
-              if (_formKeyThird.currentState!.validate()) {
-                _formKeyThird.currentState!.save();
-                _onStepContinue();
-              }
-            } else {
-              showError(context);
-            }
-          } else if (_formKeyFirst.currentState!.validate() &&
+          } else if (_currentStep == 2 &&
+              _formKeyFirst.currentState!.validate() &&
               _formKeySecond.currentState!.validate() &&
               _formKeyThird.currentState!.validate() &&
               image != null) {
