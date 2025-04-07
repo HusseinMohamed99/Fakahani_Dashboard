@@ -194,18 +194,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
     return CustomButton(
         text: context.localization.next,
         onPressed: () {
-          if (_currentStep == 0) {
-            if (_formKeyFirst.currentState!.validate()) {
-              _formKeyFirst.currentState!.save();
-              _onStepContinue();
-            }
-          } else if (_currentStep == 1) {
-            if (_formKeySecond.currentState!.validate()) {
-              _formKeySecond.currentState!.save();
-              _onStepContinue();
-            }
-          } else if (_currentStep == 2 &&
-              _formKeyFirst.currentState!.validate() &&
+       if (_formKeyFirst.currentState!.validate() &&
               _formKeySecond.currentState!.validate() &&
               _formKeyThird.currentState!.validate() &&
               image != null) {
@@ -229,7 +218,6 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
           }
         }).vPadding(kPaddingLargeVertical);
   }
-
   StepState _stepState(int step) {
     if (_currentStep == step) {
       return StepState.editing;

@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:fakahani_dashboard/core/helpers/functions/app_logs.dart';
 import 'package:fakahani_dashboard/core/repos/images_repo/images_repo.dart';
 import 'package:fakahani_dashboard/core/repos/product_repo/product_repo.dart';
 import 'package:fakahani_dashboard/features/add_product/domain/entities/add_product_input_entity.dart';
