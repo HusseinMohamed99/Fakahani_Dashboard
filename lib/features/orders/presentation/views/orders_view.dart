@@ -1,6 +1,6 @@
 import 'package:fakahani_dashboard/core/di/dependency_injection.dart';
 import 'package:fakahani_dashboard/core/widgets/get_order_dummy_data.dart';
-import 'package:fakahani_dashboard/features/orders/domain/entities/repos/orders_repo.dart';
+import 'package:fakahani_dashboard/features/orders/domain/repos/orders_repo.dart';
 import 'package:fakahani_dashboard/features/orders/presentation/logic/fetch_ordres/fetch_orders_cubit.dart';
 import 'package:fakahani_dashboard/features/orders/presentation/logic/update_order/update_order_cubit.dart';
 import 'package:fakahani_dashboard/features/orders/presentation/views/widgets/orders_view_body.dart';

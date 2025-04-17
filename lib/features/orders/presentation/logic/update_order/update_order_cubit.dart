@@ -1,5 +1,5 @@
 import 'package:fakahani_dashboard/core/helpers/enum/order_enum.dart';
-import 'package:fakahani_dashboard/features/orders/domain/entities/repos/orders_repo.dart';
+import 'package:fakahani_dashboard/features/orders/domain/repos/orders_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

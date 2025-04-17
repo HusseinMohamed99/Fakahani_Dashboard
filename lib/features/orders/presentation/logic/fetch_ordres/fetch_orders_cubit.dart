@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:fakahani_dashboard/features/orders/domain/entities/order_entity.dart';
-import 'package:fakahani_dashboard/features/orders/domain/entities/repos/orders_repo.dart';
+import 'package:fakahani_dashboard/features/orders/domain/repos/orders_repo.dart';
 import 'package:flutter/material.dart';
 
 part 'fetch_orders_state.dart';

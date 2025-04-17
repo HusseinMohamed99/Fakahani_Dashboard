@@ -5,7 +5,7 @@ import 'package:fakahani_dashboard/core/networking/services/database_service.dar
 import 'package:fakahani_dashboard/core/networking/services/end_point.dart';
 import 'package:fakahani_dashboard/features/orders/data/models/order_model.dart';
 import 'package:fakahani_dashboard/features/orders/domain/entities/order_entity.dart';
-import 'package:fakahani_dashboard/features/orders/domain/entities/repos/orders_repo.dart';
+import 'package:fakahani_dashboard/features/orders/domain/repos/orders_repo.dart';
 
 class OrdersRepoImpl implements OrdersRepo {
   final DatabaseServices _dataService;
